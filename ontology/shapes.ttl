@@ -1,0 +1,70 @@
+# =============================================================================
+# SHACL 校验规则 — 封闭世界的"自动合规官"
+# 分工：OWL 管推理（开放世界），SHACL 管数据校验（封闭世界）。
+# =============================================================================
+@prefix :      <https://demo.local/ecat#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+# ---- SKU 基础数据质量 -------------------------------------------------------
+:SKUShape a sh:NodeShape ;
+    sh:targetClass :SKU ;
+    sh:property [
+        sh:path :belongsToCategory ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "每个在售 SKU 必须且只能挂一个叶子类目" ;
+    ] ;
+    sh:property [
+        sh:path :price ;
+        sh:minExclusive 0 ;
+        sh:message "价格必须大于 0" ;
+    ] ;
+    sh:property [
+        sh:path :listedDate ;
+        sh:minCount 1 ;
+        sh:datatype xsd:date ;
+        sh:message "上架日期必填且必须是日期类型" ;
+    ] .
+
+# ---- 促销报名合规 -----------------------------------------------------------
+:PromoShape a sh:NodeShape ;
+    sh:targetClass :PromoEnrollment ;
+    sh:property [
+        sh:path :promoPrice ;
+        sh:minExclusive 0 ;
+        sh:message "促销价必须大于 0" ;
+    ] ;
+    # 规则：报名大促的 SKU 必须挂载至少一份资质证书
+    sh:sparql [
+        sh:message "报名大促的 SKU 缺少资质证书" ;
+        sh:prefixes [ sh:prefix : ; sh:namespace "https://demo.local/ecat#"^^xsd:anyURI ] ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :enrollsSKU ?sku .
+                FILTER NOT EXISTS { ?sku :hasCertification ?cert . }
+            }
+        """ ;
+    ] ;
+    # 规则：价保 —— 促销价不得高于该 SKU 近 30 天最低成交价
+    sh:sparql [
+        sh:message "击穿价保：促销价高于近30天最低成交价" ;
+        sh:prefixes [ sh:prefix : ; sh:namespace "https://demo.local/ecat#"^^xsd:anyURI ] ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :enrollsSKU ?sku ; :promoPrice ?promo .
+                ?sku :minPrice30d ?min .
+                FILTER(?promo > ?min)
+            }
+        """ ;
+    ] .
+
+# ---- 资质证书有效性 ---------------------------------------------------------
+:CertShape a sh:NodeShape ;
+    sh:targetClass :Certification ;
+    sh:property [
+        sh:path :validUntil ;
+        sh:minCount 1 ;
+        sh:datatype xsd:date ;
+        sh:message "资质证书必须有有效期" ;
+    ] .

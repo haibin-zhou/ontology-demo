@@ -1,0 +1,20 @@
+# =============================================================================
+# 新批次上架数据 —— 出现了本体中不存在的术语 :energyReturnRating（能量回馈评分），
+# 用于演示自迭代机制：检测缺口 → 生成提案 → 审批 → 应用 → 回归验证。
+# =============================================================================
+@prefix :      <https://demo.local/ecat#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+:p101 a :ActiveProduct ; :madeBy :brand_stride ; :hasSKU :sku101 .
+:sku101 a :SKU ; :belongsToCategory :cat_running_shoes ; :soldBy :m_alpha ;
+    :sales30d 0 ; :grossMargin 0.35 ; :inventoryDays 10 ;
+    :price 899.00 ; :minPrice30d 899.00 ;
+    :listedDate "2026-08-25"^^xsd:date ;
+    :energyReturnRating 0.87 .        # ← 本体里还没有这个属性（碳板跑鞋回弹率）
+
+:p102 a :ActiveProduct ; :madeBy :brand_pace ; :hasSKU :sku102 .
+:sku102 a :SKU ; :belongsToCategory :cat_running_shoes ; :soldBy :m_beta ;
+    :sales30d 0 ; :grossMargin 0.30 ; :inventoryDays 12 ;
+    :price 699.00 ; :minPrice30d 699.00 ;
+    :listedDate "2026-08-26"^^xsd:date ;
+    :energyReturnRating 0.79 .

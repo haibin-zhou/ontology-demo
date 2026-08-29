@@ -1,0 +1,23 @@
+@prefix :      <https://demo.local/ecat#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+# ---- 武器一：传递性（TransitiveProperty）--------------------------------------
+# 声明一次"子类目可传递"，整条类目树的祖先关系全部自动成立
+:subCategoryOf a owl:ObjectProperty , owl:TransitiveProperty .
+
+# ---- 武器二：互逆（inverseOf）--------------------------------------------------
+# 写了 hasSKU 就自动有 isSKUOf，两个方向查都行
+:hasSKU  a owl:ObjectProperty .
+:isSKUOf a owl:ObjectProperty ; owl:inverseOf :hasSKU .
+
+# ---- 武器三：属性链（propertyChainAxiom）---------------------------------------
+# SKU --属于→ SPU --品牌→ 品牌   压缩成一条直达边：SKU --skuBrand→ 品牌
+:madeBy   a owl:ObjectProperty .
+:skuBrand a owl:ObjectProperty ;
+    owl:propertyChainAxiom ( :isSKUOf :madeBy ) .
+
+# ---- 武器四：互斥（disjointWith）------------------------------------------------
+# 一个商品不可能既在售又已下架；违反了就是逻辑矛盾
+:ActiveProduct    a owl:Class .
+:DelistedProduct  a owl:Class ; owl:disjointWith :ActiveProduct .

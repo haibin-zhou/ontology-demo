@@ -1,0 +1,311 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://demo.local/ecat/"
+     xml:base="https://demo.local/ecat/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://demo.local/ecat/"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://demo.local/ecat/BRAND_AUTHORIZATION#ref-BRAND_ID -->
+
+
+    <owl:ObjectProperty rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION#ref-BRAND_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/BRAND_AUTHORIZATION#ref-MERCHANT_ID -->
+
+
+    <owl:ObjectProperty rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION#ref-MERCHANT_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/CATEGORY#ref-PARENT_ID -->
+
+
+    <owl:ObjectProperty rdf:about="https://demo.local/ecat/CATEGORY#ref-PARENT_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/PRODUCT#ref-BRAND_ID -->
+
+
+    <owl:ObjectProperty rdf:about="https://demo.local/ecat/PRODUCT#ref-BRAND_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#ref-CATEGORY_ID -->
+
+
+    <owl:ObjectProperty rdf:about="https://demo.local/ecat/SKU#ref-CATEGORY_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#ref-MERCHANT_ID -->
+
+
+    <owl:ObjectProperty rdf:about="https://demo.local/ecat/SKU#ref-MERCHANT_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#ref-PRODUCT_ID -->
+
+
+    <owl:ObjectProperty rdf:about="https://demo.local/ecat/SKU#ref-PRODUCT_ID"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://demo.local/ecat/BRAND#COUNTRY -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/BRAND#COUNTRY"/>
+    
+
+
+    <!-- https://demo.local/ecat/BRAND#ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/BRAND#ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/BRAND#NAME -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/BRAND#NAME"/>
+    
+
+
+    <!-- https://demo.local/ecat/BRAND_AUTHORIZATION#BRAND_ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION#BRAND_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/BRAND_AUTHORIZATION#ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION#ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/BRAND_AUTHORIZATION#MERCHANT_ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION#MERCHANT_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/BRAND_AUTHORIZATION#VALID_UNTIL -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION#VALID_UNTIL"/>
+    
+
+
+    <!-- https://demo.local/ecat/CATEGORY#ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/CATEGORY#ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/CATEGORY#NAME -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/CATEGORY#NAME"/>
+    
+
+
+    <!-- https://demo.local/ecat/CATEGORY#PARENT_ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/CATEGORY#PARENT_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/MERCHANT#ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/MERCHANT#ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/MERCHANT#NAME -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/MERCHANT#NAME"/>
+    
+
+
+    <!-- https://demo.local/ecat/PRODUCT#BRAND_ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/PRODUCT#BRAND_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/PRODUCT#ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/PRODUCT#ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/PRODUCT#NAME -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/PRODUCT#NAME"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#CATEGORY_ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/SKU#CATEGORY_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/SKU#ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#INVENTORY_DAYS -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/SKU#INVENTORY_DAYS"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#LISTED_DATE -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/SKU#LISTED_DATE"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#MERCHANT_ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/SKU#MERCHANT_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#MIN_PRICE_30D -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/SKU#MIN_PRICE_30D"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#PRICE -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/SKU#PRICE"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#PRODUCT_ID -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/SKU#PRODUCT_ID"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU#SALES_30D -->
+
+
+    <owl:DatatypeProperty rdf:about="https://demo.local/ecat/SKU#SALES_30D"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://demo.local/ecat/BRAND -->
+
+
+    <owl:Class rdf:about="https://demo.local/ecat/BRAND"/>
+    
+
+
+    <!-- https://demo.local/ecat/BRAND_AUTHORIZATION -->
+
+
+    <owl:Class rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION"/>
+    
+
+
+    <!-- https://demo.local/ecat/CATEGORY -->
+
+
+    <owl:Class rdf:about="https://demo.local/ecat/CATEGORY"/>
+    
+
+
+    <!-- https://demo.local/ecat/MERCHANT -->
+
+
+    <owl:Class rdf:about="https://demo.local/ecat/MERCHANT"/>
+    
+
+
+    <!-- https://demo.local/ecat/PRODUCT -->
+
+
+    <owl:Class rdf:about="https://demo.local/ecat/PRODUCT"/>
+    
+
+
+    <!-- https://demo.local/ecat/SKU -->
+
+
+    <owl:Class rdf:about="https://demo.local/ecat/SKU"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.1) https://github.com/owlcs/owlapi/ -->
+
+

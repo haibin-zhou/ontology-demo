@@ -1,0 +1,20 @@
+@prefix :      <https://demo.local/ecat#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+# ---- 类层级：跑步鞋是鞋，鞋是商品 ---------------------------------------------
+:Product          a owl:Class .
+:Footwear         a owl:Class ; rdfs:subClassOf :Product .
+:RunningShoe      a owl:Class ; rdfs:subClassOf :Footwear .
+
+# ---- 属性的 domain/range：谁用了这个属性，就自动获得类型 ------------------------
+:soldBy   a owl:ObjectProperty ;
+          rdfs:domain :SKU ;        # 写 ":xx :soldBy :yy" ⇒ :xx 自动是 SKU
+          rdfs:range  :Merchant .   #                  ⇒ :yy 自动是 Merchant
+:SKU      a owl:Class .
+:Merchant a owl:Class .
+
+# ---- 属性层级：旗舰店销售 是 销售 的一种 ---------------------------------------
+:flagshipSoldBy a owl:ObjectProperty ; rdfs:subPropertyOf :soldBy .

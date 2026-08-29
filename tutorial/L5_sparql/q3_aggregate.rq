@@ -1,0 +1,7 @@
+# Q3 聚合：每个类目的 SKU 数和总销量
+PREFIX : <https://demo.local/ecat#>
+SELECT ?cat (COUNT(?s) AS ?skuCount) (SUM(?sales) AS ?totalSales) WHERE {
+  ?s a :SKU ; :belongsToCategory ?cat ; :sales30d ?sales .
+}
+GROUP BY ?cat
+ORDER BY DESC(?totalSales)

@@ -1,0 +1,3 @@
+# CI 违规查询：互斥类同实例（既在售又已下架）
+PREFIX : <https://demo.local/ecat#>
+SELECT ?x WHERE { ?x a :ActiveProduct ; a :DelistedProduct . }

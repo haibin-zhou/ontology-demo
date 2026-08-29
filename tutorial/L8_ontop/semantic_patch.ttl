@@ -1,0 +1,44 @@
+# =============================================================================
+# 语义补丁：给 bootstrap 骨架补上 L2/L3 的规则层
+# 骨架（bootstrap_full.ttl）由数据库自动生成，本文件手写——这就是"60% 生成 + 40% 语义"。
+# 注意：bootstrap 生成的 IRI 里含 '#'（如 SKU#ref-PRODUCT_ID），Turtle 里必须写全称。
+# =============================================================================
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ecat:  <https://demo.local/ecat/> .
+
+# ---- L2 武器①：类层级（subClassOf）---------------------------------------------
+ecat:SellableItem a owl:Class ; rdfs:label "可售品" .
+ecat:SKU rdfs:subClassOf ecat:SellableItem .
+
+# ---- L2 武器②：domain/range（用属性即推断类型）----------------------------------
+<https://demo.local/ecat/SKU#ref-PRODUCT_ID>
+    rdfs:domain ecat:SKU ; rdfs:range ecat:PRODUCT .
+
+# ---- L3 武器①：互逆（inverseOf）------------------------------------------------
+# SKU→SPU 的外键属性，反向就是"SPU 拥有 SKU"
+ecat:hasSKU a owl:ObjectProperty ;
+    owl:inverseOf <https://demo.local/ecat/SKU#ref-PRODUCT_ID> .
+
+# ---- L3 武器②：传递（TransitiveProperty）----------------------------------------
+# category.parent_id 这个自引用外键 = 类目树，声明传递后祖先关系自动闭包
+<https://demo.local/ecat/CATEGORY#ref-PARENT_ID>
+    a owl:TransitiveProperty .
+
+# ---- L3 武器③：属性链（propertyChainAxiom）---------------------------------------
+# 链一：SKU --属于SPU--> PRODUCT --品牌--> BRAND  ⇒  SKU 的品牌
+ecat:skuBrand a owl:ObjectProperty ; rdfs:label "SKU品牌（推导）" ;
+    owl:propertyChainAxiom (
+        <https://demo.local/ecat/SKU#ref-PRODUCT_ID>
+        <https://demo.local/ecat/PRODUCT#ref-BRAND_ID>
+    ) .
+
+# 链二：MERCHANT --持有授权--> BRAND_AUTHORIZATION --覆盖品牌--> BRAND
+#      注意第一段要用外键的逆（外键方向是 authorization → merchant）
+ecat:hasAuthorization a owl:ObjectProperty ;
+    owl:inverseOf <https://demo.local/ecat/BRAND_AUTHORIZATION#ref-MERCHANT_ID> .
+ecat:authorizedBrand a owl:ObjectProperty ; rdfs:label "被授权品牌（推导）" ;
+    owl:propertyChainAxiom (
+        ecat:hasAuthorization
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#ref-BRAND_ID>
+    ) .

@@ -1,0 +1,18 @@
+# 凭证
+.env
+
+# 虚拟环境
+.venv/
+
+# 工具二进制（体积大，按 docs/工具学习手册.md 自行安装）
+tools/
+
+# 向导运行状态
+.wizard_state.json
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

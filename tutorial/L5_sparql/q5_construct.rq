@@ -1,0 +1,4 @@
+# Q5 CONSTRUCT：查询的结果是"新三元组"——把月销量>100的定义成 :HotSeller
+PREFIX : <https://demo.local/ecat#>
+CONSTRUCT { ?s a :HotSeller }
+WHERE { ?s a :SKU ; :sales30d ?sales . FILTER(?sales > 100) }

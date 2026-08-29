@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CERTIFICATION/ID=1">
+	<CERT_TYPE xmlns="https://demo.local/ecat/CERTIFICATION#">质检报告</CERT_TYPE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CERTIFICATION/ID=2">
+	<CERT_TYPE xmlns="https://demo.local/ecat/CERTIFICATION#">质检报告</CERT_TYPE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=1">
+	<ref-BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:resource="https://demo.local/ecat/BRAND/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=3">
+	<ref-BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:resource="https://demo.local/ecat/BRAND/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=5">
+	<ref-BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:resource="https://demo.local/ecat/BRAND/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=7">
+	<ref-BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:resource="https://demo.local/ecat/BRAND/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=2">
+	<ref-BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:resource="https://demo.local/ecat/BRAND/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=4">
+	<ref-BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:resource="https://demo.local/ecat/BRAND/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=6">
+	<ref-BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:resource="https://demo.local/ecat/BRAND/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=8">
+	<ref-BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:resource="https://demo.local/ecat/BRAND/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=1">
+	<CAMPAIGN xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#">618大促</CAMPAIGN>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=2">
+	<CAMPAIGN xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#">618大促</CAMPAIGN>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=3">
+	<CAMPAIGN xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#">618大促</CAMPAIGN>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=1">
+	<BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</BRAND_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=3">
+	<BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</BRAND_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=5">
+	<BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</BRAND_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=7">
+	<BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</BRAND_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=2">
+	<BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</BRAND_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=4">
+	<BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</BRAND_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=6">
+	<BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</BRAND_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=8">
+	<BRAND_ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</BRAND_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CERTIFICATION/ID=1">
+	<rdf:type rdf:resource="https://demo.local/ecat/CERTIFICATION"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CERTIFICATION/ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/CERTIFICATION"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<MIN_PRICE_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">459.00</MIN_PRICE_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<MIN_PRICE_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">279.00</MIN_PRICE_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<MIN_PRICE_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">379.00</MIN_PRICE_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<MIN_PRICE_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">439.00</MIN_PRICE_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<MIN_PRICE_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">349.00</MIN_PRICE_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<MIN_PRICE_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">319.00</MIN_PRICE_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<MIN_PRICE_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">249.00</MIN_PRICE_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<MIN_PRICE_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">189.00</MIN_PRICE_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1">
+	<ID xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2">
+	<ID xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=1;CERT_ID=1">
+	<CERT_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</CERT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=2;CERT_ID=2">
+	<CERT_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</CERT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=3;CERT_ID=1">
+	<CERT_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</CERT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=4;CERT_ID=2">
+	<CERT_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</CERT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=8;CERT_ID=2">
+	<CERT_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</CERT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/MERCHANT/ID=1">
+	<NAME xmlns="https://demo.local/ecat/MERCHANT#">Alpha旗舰店</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/MERCHANT/ID=2">
+	<NAME xmlns="https://demo.local/ecat/MERCHANT#">Beta专营店</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</PRODUCT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</PRODUCT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</PRODUCT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</PRODUCT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</PRODUCT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</PRODUCT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</PRODUCT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</PRODUCT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MERCHANT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MERCHANT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MERCHANT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MERCHANT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MERCHANT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MERCHANT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MERCHANT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MERCHANT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1">
+	<ref-BRAND_ID xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:resource="https://demo.local/ecat/BRAND/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2">
+	<ref-BRAND_ID xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:resource="https://demo.local/ecat/BRAND/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</CATEGORY_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</CATEGORY_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</CATEGORY_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</CATEGORY_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</CATEGORY_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</CATEGORY_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</CATEGORY_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1">
+	<MERCHANT_ID xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</MERCHANT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2">
+	<MERCHANT_ID xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</MERCHANT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=1">
+	<ID xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=2">
+	<ID xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=3">
+	<ID xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<PRICE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">499.00</PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<PRICE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">299.00</PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<PRICE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">399.00</PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<PRICE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">469.00</PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<PRICE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">359.00</PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<PRICE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">329.00</PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<PRICE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">259.00</PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<PRICE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">199.00</PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=1">
+	<STATUS xmlns="https://demo.local/ecat/PRODUCT#">ACTIVE</STATUS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=2">
+	<STATUS xmlns="https://demo.local/ecat/PRODUCT#">ACTIVE</STATUS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=3">
+	<STATUS xmlns="https://demo.local/ecat/PRODUCT#">ACTIVE</STATUS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=4">
+	<STATUS xmlns="https://demo.local/ecat/PRODUCT#">ACTIVE</STATUS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=5">
+	<STATUS xmlns="https://demo.local/ecat/PRODUCT#">ACTIVE</STATUS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=6">
+	<STATUS xmlns="https://demo.local/ecat/PRODUCT#">ACTIVE</STATUS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=7">
+	<STATUS xmlns="https://demo.local/ecat/PRODUCT#">ACTIVE</STATUS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=8">
+	<STATUS xmlns="https://demo.local/ecat/PRODUCT#">ACTIVE</STATUS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND/ID=1">
+	<COUNTRY xmlns="https://demo.local/ecat/BRAND#">美国</COUNTRY>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND/ID=2">
+	<COUNTRY xmlns="https://demo.local/ecat/BRAND#">中国</COUNTRY>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1">
+	<rdf:type rdf:resource="https://demo.local/ecat/BRAND_AUTHORIZATION"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/BRAND_AUTHORIZATION"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1">
+	<VALID_UNTIL xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2027-06-30</VALID_UNTIL>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2">
+	<VALID_UNTIL xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-09-10</VALID_UNTIL>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CERTIFICATION/ID=1">
+	<ID xmlns="https://demo.local/ecat/CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CERTIFICATION/ID=2">
+	<ID xmlns="https://demo.local/ecat/CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1">
+	<ref-MERCHANT_ID xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:resource="https://demo.local/ecat/MERCHANT/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2">
+	<ref-MERCHANT_ID xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:resource="https://demo.local/ecat/MERCHANT/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CERTIFICATION/ID=1">
+	<VALID_UNTIL xmlns="https://demo.local/ecat/CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2027-03-01</VALID_UNTIL>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CERTIFICATION/ID=2">
+	<VALID_UNTIL xmlns="https://demo.local/ecat/CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-12-31</VALID_UNTIL>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=1">
+	<SKU_ID xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SKU_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=2">
+	<SKU_ID xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</SKU_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=3">
+	<SKU_ID xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</SKU_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND/ID=1">
+	<NAME xmlns="https://demo.local/ecat/BRAND#">StrideMax</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND/ID=2">
+	<NAME xmlns="https://demo.local/ecat/BRAND#">PaceFox</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND/ID=1">
+	<rdf:type rdf:resource="https://demo.local/ecat/BRAND"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND/ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/BRAND"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=2">
+	<ref-PARENT_ID xmlns="https://demo.local/ecat/CATEGORY#" rdf:resource="https://demo.local/ecat/CATEGORY/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=3">
+	<ref-PARENT_ID xmlns="https://demo.local/ecat/CATEGORY#" rdf:resource="https://demo.local/ecat/CATEGORY/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<SALES_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</SALES_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<SALES_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</SALES_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<SALES_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</SALES_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<SALES_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</SALES_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<SALES_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</SALES_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<SALES_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</SALES_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<SALES_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</SALES_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<SALES_30D xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SALES_30D>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<ref-MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/MERCHANT/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<ref-MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/MERCHANT/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<ref-MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/MERCHANT/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<ref-MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/MERCHANT/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<ref-MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/MERCHANT/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<ref-MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/MERCHANT/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<ref-MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/MERCHANT/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<ref-MERCHANT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/MERCHANT/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=1">
+	<ID xmlns="https://demo.local/ecat/CATEGORY#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=2">
+	<ID xmlns="https://demo.local/ecat/CATEGORY#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=3">
+	<ID xmlns="https://demo.local/ecat/CATEGORY#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=1">
+	<ref-SKU_ID xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:resource="https://demo.local/ecat/SKU/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=2">
+	<ref-SKU_ID xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:resource="https://demo.local/ecat/SKU/ID=4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=3">
+	<ref-SKU_ID xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:resource="https://demo.local/ecat/SKU/ID=6"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/MERCHANT/ID=1">
+	<rdf:type rdf:resource="https://demo.local/ecat/MERCHANT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/MERCHANT/ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/MERCHANT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<ref-PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/PRODUCT/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<ref-PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/PRODUCT/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<ref-PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/PRODUCT/ID=3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<ref-PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/PRODUCT/ID=4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<ref-PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/PRODUCT/ID=5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<ref-PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/PRODUCT/ID=6"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<ref-PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/PRODUCT/ID=7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<ref-PRODUCT_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/PRODUCT/ID=8"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=1">
+	<rdf:type rdf:resource="https://demo.local/ecat/PRODUCT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=3">
+	<rdf:type rdf:resource="https://demo.local/ecat/PRODUCT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=5">
+	<rdf:type rdf:resource="https://demo.local/ecat/PRODUCT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=7">
+	<rdf:type rdf:resource="https://demo.local/ecat/PRODUCT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/PRODUCT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=4">
+	<rdf:type rdf:resource="https://demo.local/ecat/PRODUCT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=6">
+	<rdf:type rdf:resource="https://demo.local/ecat/PRODUCT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=8">
+	<rdf:type rdf:resource="https://demo.local/ecat/PRODUCT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<INVENTORY_DAYS xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</INVENTORY_DAYS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<INVENTORY_DAYS xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</INVENTORY_DAYS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<INVENTORY_DAYS xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</INVENTORY_DAYS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<INVENTORY_DAYS xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</INVENTORY_DAYS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<INVENTORY_DAYS xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</INVENTORY_DAYS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<INVENTORY_DAYS xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</INVENTORY_DAYS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<INVENTORY_DAYS xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</INVENTORY_DAYS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<INVENTORY_DAYS xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</INVENTORY_DAYS>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=1">
+	<NAME xmlns="https://demo.local/ecat/PRODUCT#">闪电跑鞋SPU</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=2">
+	<NAME xmlns="https://demo.local/ecat/PRODUCT#">清风跑鞋SPU</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=3">
+	<NAME xmlns="https://demo.local/ecat/PRODUCT#">疾风跑鞋SPU</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=4">
+	<NAME xmlns="https://demo.local/ecat/PRODUCT#">幻影竞速SPU</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=5">
+	<NAME xmlns="https://demo.local/ecat/PRODUCT#">晨曦跑鞋SPU</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=6">
+	<NAME xmlns="https://demo.local/ecat/PRODUCT#">赤兔跑鞋SPU</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=7">
+	<NAME xmlns="https://demo.local/ecat/PRODUCT#">磐石跑鞋SPU</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=8">
+	<NAME xmlns="https://demo.local/ecat/PRODUCT#">孤影跑鞋SPU</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=1">
+	<NAME xmlns="https://demo.local/ecat/CATEGORY#">运动户外</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=2">
+	<NAME xmlns="https://demo.local/ecat/CATEGORY#">跑步装备</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=3">
+	<NAME xmlns="https://demo.local/ecat/CATEGORY#">跑步鞋</NAME>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1">
+	<BRAND_ID xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</BRAND_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2">
+	<BRAND_ID xmlns="https://demo.local/ecat/BRAND_AUTHORIZATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</BRAND_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=2">
+	<PARENT_ID xmlns="https://demo.local/ecat/CATEGORY#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</PARENT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=3">
+	<PARENT_ID xmlns="https://demo.local/ecat/CATEGORY#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</PARENT_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<ref-CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/CATEGORY/ID=3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<ref-CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/CATEGORY/ID=3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<ref-CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/CATEGORY/ID=3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<ref-CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/CATEGORY/ID=3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<ref-CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/CATEGORY/ID=3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<ref-CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/CATEGORY/ID=3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<ref-CATEGORY_ID xmlns="https://demo.local/ecat/SKU#" rdf:resource="https://demo.local/ecat/CATEGORY/ID=3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=1;CERT_ID=1">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU_CERTIFICATION"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=2;CERT_ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU_CERTIFICATION"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=3;CERT_ID=1">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU_CERTIFICATION"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=4;CERT_ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU_CERTIFICATION"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=8;CERT_ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/SKU_CERTIFICATION"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=1">
+	<rdf:type rdf:resource="https://demo.local/ecat/CATEGORY"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/CATEGORY"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/CATEGORY/ID=3">
+	<rdf:type rdf:resource="https://demo.local/ecat/CATEGORY"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=1;CERT_ID=1">
+	<SKU_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</SKU_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=2;CERT_ID=2">
+	<SKU_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</SKU_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=3;CERT_ID=1">
+	<SKU_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</SKU_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=4;CERT_ID=2">
+	<SKU_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</SKU_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=8;CERT_ID=2">
+	<SKU_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</SKU_ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=1">
+	<PROMO_PRICE xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">449.00</PROMO_PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=2">
+	<PROMO_PRICE xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">449.00</PROMO_PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=3">
+	<PROMO_PRICE xmlns="https://demo.local/ecat/PROMO_ENROLLMENT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">309.00</PROMO_PRICE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/MERCHANT/ID=1">
+	<ID xmlns="https://demo.local/ecat/MERCHANT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/MERCHANT/ID=2">
+	<ID xmlns="https://demo.local/ecat/MERCHANT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<LISTED_DATE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-11</LISTED_DATE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<LISTED_DATE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-02</LISTED_DATE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<LISTED_DATE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-20</LISTED_DATE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<LISTED_DATE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-08-10</LISTED_DATE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<LISTED_DATE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-07-01</LISTED_DATE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<LISTED_DATE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-15</LISTED_DATE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<LISTED_DATE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-03-08</LISTED_DATE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<LISTED_DATE xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-20</LISTED_DATE>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND/ID=1">
+	<ID xmlns="https://demo.local/ecat/BRAND#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/BRAND/ID=2">
+	<ID xmlns="https://demo.local/ecat/BRAND#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=1">
+	<rdf:type rdf:resource="https://demo.local/ecat/PROMO_ENROLLMENT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=2">
+	<rdf:type rdf:resource="https://demo.local/ecat/PROMO_ENROLLMENT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PROMO_ENROLLMENT/ID=3">
+	<rdf:type rdf:resource="https://demo.local/ecat/PROMO_ENROLLMENT"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=1">
+	<ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=3">
+	<ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=5">
+	<ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=7">
+	<ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=2">
+	<ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=4">
+	<ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=6">
+	<ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/PRODUCT/ID=8">
+	<ID xmlns="https://demo.local/ecat/PRODUCT#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=1;CERT_ID=1">
+	<ref-CERT_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:resource="https://demo.local/ecat/CERTIFICATION/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=2;CERT_ID=2">
+	<ref-CERT_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:resource="https://demo.local/ecat/CERTIFICATION/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=3;CERT_ID=1">
+	<ref-CERT_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:resource="https://demo.local/ecat/CERTIFICATION/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=4;CERT_ID=2">
+	<ref-CERT_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:resource="https://demo.local/ecat/CERTIFICATION/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=8;CERT_ID=2">
+	<ref-CERT_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:resource="https://demo.local/ecat/CERTIFICATION/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=1">
+	<ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=2">
+	<ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=3">
+	<ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=4">
+	<ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=5">
+	<ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=6">
+	<ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=7">
+	<ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU/ID=8">
+	<ID xmlns="https://demo.local/ecat/SKU#" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ID>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=1;CERT_ID=1">
+	<ref-SKU_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:resource="https://demo.local/ecat/SKU/ID=1"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=2;CERT_ID=2">
+	<ref-SKU_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:resource="https://demo.local/ecat/SKU/ID=2"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=3;CERT_ID=1">
+	<ref-SKU_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:resource="https://demo.local/ecat/SKU/ID=3"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=4;CERT_ID=2">
+	<ref-SKU_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:resource="https://demo.local/ecat/SKU/ID=4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=8;CERT_ID=2">
+	<ref-SKU_ID xmlns="https://demo.local/ecat/SKU_CERTIFICATION#" rdf:resource="https://demo.local/ecat/SKU/ID=8"/>
+</rdf:Description>
+
+</rdf:RDF>

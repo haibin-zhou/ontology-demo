@@ -1,0 +1,11 @@
+# CQ1: 哪些 SKU 动销达标、毛利达标、且资质在有效期内 → 可报名大促
+PREFIX :    <https://demo.local/ecat#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?sku WHERE {
+  ?sku a :SKU ;
+       :sales30d ?s ;
+       :grossMargin ?m ;
+       :hasCertification ?cert .
+  ?cert :validUntil ?exp .
+  FILTER(?s >= $MIN_SALES && ?m >= $MIN_MARGIN && ?exp > "$AS_OF"^^xsd:date)
+}

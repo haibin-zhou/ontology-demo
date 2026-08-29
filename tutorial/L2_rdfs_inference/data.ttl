@@ -1,0 +1,6 @@
+@prefix : <https://demo.local/ecat#> .
+
+# 数据极简：只说"sku1 是跑步鞋""sku1 由 alpha 旗舰店销售"
+# 注意：我们【没有】说 sku1 是 SKU、是 Footwear、是 Product；也没说 m_alpha 是 Merchant
+:sku1 a :RunningShoe ;
+      :flagshipSoldBy :m_alpha .

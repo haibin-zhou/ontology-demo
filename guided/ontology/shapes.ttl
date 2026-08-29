@@ -1,0 +1,62 @@
+# =============================================================================
+# SHACL 校验规则（S8：4 条硬规则，用户全部勾选）
+# 分工提醒：OWL 管推理（开放世界），这里管"拦数据"（封闭世界）。
+# =============================================================================
+@prefix :      <https://demo.local/ecat#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+# ---- 规则1：类目必填且唯一（抓 sku5 这种）--------------------------------------
+:SKUCategoryShape a sh:NodeShape ;
+    sh:targetClass :SKU ;
+    sh:property [
+        sh:path :belongsToCategory ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "在售 SKU 必须且只能挂一个叶子类目" ;
+    ] .
+
+# ---- 规则2：价保（促销价 ≤ 近30天最低成交价，抓 enr2）---------------------------
+:PriceGuardShape a sh:NodeShape ;
+    sh:targetClass :PromoEnrollment ;
+    sh:sparql [
+        sh:message "击穿价保：促销价高于近30天最低成交价" ;
+        sh:select """
+            PREFIX : <https://demo.local/ecat#>
+            SELECT $this WHERE {
+                $this :enrollsSKU ?sku ; :promoPrice ?promo .
+                ?sku :minPrice30d ?min .
+                FILTER(?promo > ?min)
+            }
+        """ ;
+    ] .
+
+# ---- 规则3：大促资质门槛（报名 SKU 必须有有效质检报告，抓 enr3/sku6）-------------
+:PromoCertShape a sh:NodeShape ;
+    sh:targetClass :PromoEnrollment ;
+    sh:sparql [
+        sh:message "报名大促的 SKU 缺少质检报告" ;
+        sh:select """
+            PREFIX : <https://demo.local/ecat#>
+            SELECT $this WHERE {
+                $this :enrollsSKU ?sku .
+                FILTER NOT EXISTS { ?sku :hasCertification ?cert }
+            }
+        """ ;
+    ] .
+
+# ---- 规则4：字段取值约束（S4 裁决落地：status 枚举 + 数值为正）-------------------
+:ProductStatusShape a sh:NodeShape ;
+    sh:targetClass :Product ;
+    sh:property [
+        sh:path :status ;
+        sh:in ("ACTIVE" "DELISTED") ;
+        sh:minCount 1 ; sh:maxCount 1 ;
+        sh:message "商品状态只能是 ACTIVE 或 DELISTED" ;
+    ] .
+
+:SKUValueShape a sh:NodeShape ;
+    sh:targetClass :SKU ;
+    sh:property [ sh:path :price ;  sh:minExclusive 0 ;
+                  sh:message "价格必须为正" ] ;
+    sh:property [ sh:path :gmv30d ; sh:minInclusive 0 ;
+                  sh:message "GMV 不能为负" ] .

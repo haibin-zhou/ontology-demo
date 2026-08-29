@@ -1,0 +1,8 @@
+# CQ4: 哪些商家的品牌授权书将在 N 天内到期 → 影响在售商品的续权预警
+PREFIX :    <https://demo.local/ecat#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?merchant ?auth ?exp WHERE {
+  ?merchant :holdsAuthorization ?auth .
+  ?auth :validUntil ?exp .
+  FILTER(?exp > "$AS_OF"^^xsd:date && ?exp <= "$AS_OF_PLUS_AUTH"^^xsd:date)
+}

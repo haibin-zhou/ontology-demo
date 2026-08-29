@@ -1,0 +1,7 @@
+# Q2 OPTIONAL：列出所有 SKU 的品牌国，没品牌的也要出现（LEFT JOIN 思维）
+PREFIX : <https://demo.local/ecat#>
+SELECT ?name ?country WHERE {
+  ?s a :SKU ; :name ?name .
+  OPTIONAL { ?s :madeBy/:country ?country }   # 属性路径：madeBy 再 country
+}
+ORDER BY ?name

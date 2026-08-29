@@ -1,0 +1,12 @@
+{
+  "id": "P20260829-001",
+  "type": "add_datatype_property",
+  "term": "returnRate",
+  "definition": "近30天退货率（0-1），挂在 SKU 上，用于大促选品的风控参考",
+  "proposed_by": "category-owner（用户口头提出）",
+  "rationale": "CQ1 选品目前只看 GMV/毛利/资质，高退货商品进大促会拉高售后成本",
+  "status": "approved",
+  "approved_by": "category-owner",
+  "target_version": "0.2.0",
+  "change_class": "MINOR（新增属性，向后兼容）"
+}

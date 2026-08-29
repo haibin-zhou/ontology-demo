@@ -1,0 +1,6 @@
+# Q4 属性路径 +：沿类目树向上走任意层——"运动户外大类下的所有 SKU"
+PREFIX : <https://demo.local/ecat#>
+SELECT DISTINCT ?name WHERE {
+  ?s a :SKU ; :name ?name ; :belongsToCategory ?cat .
+  ?cat :subCategoryOf* :cat_sports_outdoor .   # * = 零到任意多跳（传递闭包）
+}

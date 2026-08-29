@@ -1,0 +1,16 @@
+@prefix :      <https://demo.local/ecat#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+# 三个 SKU 的最小事实集。故意用了多种"字面量形态"供观察：
+:sku1  a              :SKU ;
+       :name          "闪电跑鞋"@zh , "Flash Runner"@en ;   # 带语言标签的字符串
+       :sales30d      120 ;                                  # 整数（xsd:integer）
+       :price         "499.00"^^xsd:decimal ;                # 显式类型的十进制
+       :listedDate    "2026-05-11"^^xsd:date ;               # 日期
+       :inStock       true ;                                 # 布尔（xsd:boolean）
+       :madeBy        :brand_stride .                        # 宾语是资源（IRI），不是字符串！
+
+:sku2  a :SKU ; :name "清风跑鞋"@zh ; :sales30d 45 ; :price "299.00"^^xsd:decimal .
+:sku3  a :SKU ; :name "竞速碳板"@zh ; :sales30d 260 ; :price "899.00"^^xsd:decimal .
+
+:brand_stride  a :Brand ; :name "StrideMax"@zh .

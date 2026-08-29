@@ -1,0 +1,6 @@
+name: supplier-compliance
+title: 供应商合规审查
+base_iri: https://example.com/sc#
+version: 0.1.0
+created_by: scaffold
+# 里程碑：S1 场景 / S2 CQ / S3 术语 / S4 类 / S5 属性 / S6 公理 / S7 数据 / S8 校验 / S9 验收

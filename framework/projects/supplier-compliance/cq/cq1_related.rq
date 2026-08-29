@@ -1,0 +1,3 @@
+# CQ1 列出所有关联了 EntityB 的 EntityA
+PREFIX : <https://example.com/sc#>
+SELECT DISTINCT ?a WHERE { ?a a :EntityA ; :relatesTo ?b . }

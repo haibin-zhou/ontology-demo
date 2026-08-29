@@ -1,0 +1,481 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+<https://demo.local/ecat#sku1>
+        <https://demo.local/ecat#belongsToCategory>  <https://demo.local/ecat#cat3> .
+
+<https://demo.local/ecat#sku2>
+        <https://demo.local/ecat#belongsToCategory>  <https://demo.local/ecat#cat3> .
+
+<https://demo.local/ecat#sku3>
+        <https://demo.local/ecat#belongsToCategory>  <https://demo.local/ecat#cat3> .
+
+<https://demo.local/ecat#sku4>
+        <https://demo.local/ecat#belongsToCategory>  <https://demo.local/ecat#cat3> .
+
+<https://demo.local/ecat#sku6>
+        <https://demo.local/ecat#belongsToCategory>  <https://demo.local/ecat#cat3> .
+
+<https://demo.local/ecat#sku7>
+        <https://demo.local/ecat#belongsToCategory>  <https://demo.local/ecat#cat3> .
+
+<https://demo.local/ecat#sku8>
+        <https://demo.local/ecat#belongsToCategory>  <https://demo.local/ecat#cat3> .
+
+<https://demo.local/ecat#auth1>
+        rdf:type  <https://demo.local/ecat#Authorization> .
+
+<https://demo.local/ecat#auth2>
+        rdf:type  <https://demo.local/ecat#Authorization> .
+
+<https://demo.local/ecat#product1>
+        <https://demo.local/ecat#madeBy>  <https://demo.local/ecat#brand1> .
+
+<https://demo.local/ecat#product3>
+        <https://demo.local/ecat#madeBy>  <https://demo.local/ecat#brand1> .
+
+<https://demo.local/ecat#product5>
+        <https://demo.local/ecat#madeBy>  <https://demo.local/ecat#brand1> .
+
+<https://demo.local/ecat#product7>
+        <https://demo.local/ecat#madeBy>  <https://demo.local/ecat#brand1> .
+
+<https://demo.local/ecat#product2>
+        <https://demo.local/ecat#madeBy>  <https://demo.local/ecat#brand2> .
+
+<https://demo.local/ecat#product4>
+        <https://demo.local/ecat#madeBy>  <https://demo.local/ecat#brand2> .
+
+<https://demo.local/ecat#product6>
+        <https://demo.local/ecat#madeBy>  <https://demo.local/ecat#brand2> .
+
+<https://demo.local/ecat#product8>
+        <https://demo.local/ecat#madeBy>  <https://demo.local/ecat#brand2> .
+
+<https://demo.local/ecat#enr1>
+        <https://demo.local/ecat#promoPrice>  449.00 .
+
+<https://demo.local/ecat#enr2>
+        <https://demo.local/ecat#promoPrice>  449.00 .
+
+<https://demo.local/ecat#enr3>
+        <https://demo.local/ecat#promoPrice>  309.00 .
+
+<https://demo.local/ecat#sku1>
+        <https://demo.local/ecat#inventoryDays>  20 .
+
+<https://demo.local/ecat#sku2>
+        <https://demo.local/ecat#inventoryDays>  95 .
+
+<https://demo.local/ecat#sku3>
+        <https://demo.local/ecat#inventoryDays>  30 .
+
+<https://demo.local/ecat#sku4>
+        <https://demo.local/ecat#inventoryDays>  15 .
+
+<https://demo.local/ecat#sku5>
+        <https://demo.local/ecat#inventoryDays>  40 .
+
+<https://demo.local/ecat#sku6>
+        <https://demo.local/ecat#inventoryDays>  25 .
+
+<https://demo.local/ecat#sku7>
+        <https://demo.local/ecat#inventoryDays>  50 .
+
+<https://demo.local/ecat#sku8>
+        <https://demo.local/ecat#inventoryDays>  120 .
+
+<https://demo.local/ecat#sku1>
+        <https://demo.local/ecat#isSKUOf>  <https://demo.local/ecat#product1> .
+
+<https://demo.local/ecat#sku2>
+        <https://demo.local/ecat#isSKUOf>  <https://demo.local/ecat#product2> .
+
+<https://demo.local/ecat#sku3>
+        <https://demo.local/ecat#isSKUOf>  <https://demo.local/ecat#product3> .
+
+<https://demo.local/ecat#sku4>
+        <https://demo.local/ecat#isSKUOf>  <https://demo.local/ecat#product4> .
+
+<https://demo.local/ecat#sku5>
+        <https://demo.local/ecat#isSKUOf>  <https://demo.local/ecat#product5> .
+
+<https://demo.local/ecat#sku6>
+        <https://demo.local/ecat#isSKUOf>  <https://demo.local/ecat#product6> .
+
+<https://demo.local/ecat#sku7>
+        <https://demo.local/ecat#isSKUOf>  <https://demo.local/ecat#product7> .
+
+<https://demo.local/ecat#sku8>
+        <https://demo.local/ecat#isSKUOf>  <https://demo.local/ecat#product8> .
+
+<https://demo.local/ecat#enr1>
+        <https://demo.local/ecat#enrollsSKU>  <https://demo.local/ecat#sku1> .
+
+<https://demo.local/ecat#enr2>
+        <https://demo.local/ecat#enrollsSKU>  <https://demo.local/ecat#sku4> .
+
+<https://demo.local/ecat#enr3>
+        <https://demo.local/ecat#enrollsSKU>  <https://demo.local/ecat#sku6> .
+
+<https://demo.local/ecat#sku1>
+        <https://demo.local/ecat#hasCertification>  <https://demo.local/ecat#cert1> .
+
+<https://demo.local/ecat#sku2>
+        <https://demo.local/ecat#hasCertification>  <https://demo.local/ecat#cert2> .
+
+<https://demo.local/ecat#sku3>
+        <https://demo.local/ecat#hasCertification>  <https://demo.local/ecat#cert1> .
+
+<https://demo.local/ecat#sku4>
+        <https://demo.local/ecat#hasCertification>  <https://demo.local/ecat#cert2> .
+
+<https://demo.local/ecat#sku8>
+        <https://demo.local/ecat#hasCertification>  <https://demo.local/ecat#cert2> .
+
+<https://demo.local/ecat#brand1>
+        rdf:type  <https://demo.local/ecat#Brand> .
+
+<https://demo.local/ecat#brand2>
+        rdf:type  <https://demo.local/ecat#Brand> .
+
+<https://demo.local/ecat#sku1>
+        <https://demo.local/ecat#listedDate>  "2026-05-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#sku2>
+        <https://demo.local/ecat#listedDate>  "2025-11-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#sku3>
+        <https://demo.local/ecat#listedDate>  "2026-06-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#sku4>
+        <https://demo.local/ecat#listedDate>  "2026-08-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#sku5>
+        <https://demo.local/ecat#listedDate>  "2026-07-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#sku6>
+        <https://demo.local/ecat#listedDate>  "2026-04-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#sku7>
+        <https://demo.local/ecat#listedDate>  "2026-03-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#sku8>
+        <https://demo.local/ecat#listedDate>  "2025-09-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#product1>
+        rdf:type  <https://demo.local/ecat#Product> .
+
+<https://demo.local/ecat#product3>
+        rdf:type  <https://demo.local/ecat#Product> .
+
+<https://demo.local/ecat#product5>
+        rdf:type  <https://demo.local/ecat#Product> .
+
+<https://demo.local/ecat#product7>
+        rdf:type  <https://demo.local/ecat#Product> .
+
+<https://demo.local/ecat#product2>
+        rdf:type  <https://demo.local/ecat#Product> .
+
+<https://demo.local/ecat#product4>
+        rdf:type  <https://demo.local/ecat#Product> .
+
+<https://demo.local/ecat#product6>
+        rdf:type  <https://demo.local/ecat#Product> .
+
+<https://demo.local/ecat#product8>
+        rdf:type  <https://demo.local/ecat#Product> .
+
+<https://demo.local/ecat#merchant1>
+        rdf:type  <https://demo.local/ecat#Merchant> .
+
+<https://demo.local/ecat#merchant2>
+        rdf:type  <https://demo.local/ecat#Merchant> .
+
+<https://demo.local/ecat#cert1>
+        rdf:type  <https://demo.local/ecat#Certification> .
+
+<https://demo.local/ecat#cert2>
+        rdf:type  <https://demo.local/ecat#Certification> .
+
+<https://demo.local/ecat#sku1>
+        <https://demo.local/ecat#price>  499.00 .
+
+<https://demo.local/ecat#sku2>
+        <https://demo.local/ecat#price>  299.00 .
+
+<https://demo.local/ecat#sku3>
+        <https://demo.local/ecat#price>  399.00 .
+
+<https://demo.local/ecat#sku4>
+        <https://demo.local/ecat#price>  469.00 .
+
+<https://demo.local/ecat#sku5>
+        <https://demo.local/ecat#price>  359.00 .
+
+<https://demo.local/ecat#sku6>
+        <https://demo.local/ecat#price>  329.00 .
+
+<https://demo.local/ecat#sku7>
+        <https://demo.local/ecat#price>  259.00 .
+
+<https://demo.local/ecat#sku8>
+        <https://demo.local/ecat#price>  199.00 .
+
+<https://demo.local/ecat#product1>
+        <https://demo.local/ecat#status>  "ACTIVE" .
+
+<https://demo.local/ecat#product2>
+        <https://demo.local/ecat#status>  "ACTIVE" .
+
+<https://demo.local/ecat#product3>
+        <https://demo.local/ecat#status>  "ACTIVE" .
+
+<https://demo.local/ecat#product4>
+        <https://demo.local/ecat#status>  "ACTIVE" .
+
+<https://demo.local/ecat#product5>
+        <https://demo.local/ecat#status>  "ACTIVE" .
+
+<https://demo.local/ecat#product6>
+        <https://demo.local/ecat#status>  "ACTIVE" .
+
+<https://demo.local/ecat#product7>
+        <https://demo.local/ecat#status>  "ACTIVE" .
+
+<https://demo.local/ecat#product8>
+        <https://demo.local/ecat#status>  "ACTIVE" .
+
+<https://demo.local/ecat#sku8>
+        <https://demo.local/ecat#gmv30d>  597.00 .
+
+<https://demo.local/ecat#sku2>
+        <https://demo.local/ecat#gmv30d>  1495.00 .
+
+<https://demo.local/ecat#sku7>
+        <https://demo.local/ecat#gmv30d>  15540.00 .
+
+<https://demo.local/ecat#sku5>
+        <https://demo.local/ecat#gmv30d>  16155.00 .
+
+<https://demo.local/ecat#sku6>
+        <https://demo.local/ecat#gmv30d>  23030.00 .
+
+<https://demo.local/ecat#sku3>
+        <https://demo.local/ecat#gmv30d>  31920.00 .
+
+<https://demo.local/ecat#sku1>
+        <https://demo.local/ecat#gmv30d>  59880.00 .
+
+<https://demo.local/ecat#sku4>
+        <https://demo.local/ecat#gmv30d>  121940.00 .
+
+<https://demo.local/ecat#cat2>
+        <https://demo.local/ecat#subCategoryOf>  <https://demo.local/ecat#cat1> .
+
+<https://demo.local/ecat#cat3>
+        <https://demo.local/ecat#subCategoryOf>  <https://demo.local/ecat#cat2> .
+
+<https://demo.local/ecat#product1>
+        <https://demo.local/ecat#hasSKU>  <https://demo.local/ecat#sku1> .
+
+<https://demo.local/ecat#product2>
+        <https://demo.local/ecat#hasSKU>  <https://demo.local/ecat#sku2> .
+
+<https://demo.local/ecat#product3>
+        <https://demo.local/ecat#hasSKU>  <https://demo.local/ecat#sku3> .
+
+<https://demo.local/ecat#product4>
+        <https://demo.local/ecat#hasSKU>  <https://demo.local/ecat#sku4> .
+
+<https://demo.local/ecat#product5>
+        <https://demo.local/ecat#hasSKU>  <https://demo.local/ecat#sku5> .
+
+<https://demo.local/ecat#product6>
+        <https://demo.local/ecat#hasSKU>  <https://demo.local/ecat#sku6> .
+
+<https://demo.local/ecat#product7>
+        <https://demo.local/ecat#hasSKU>  <https://demo.local/ecat#sku7> .
+
+<https://demo.local/ecat#product8>
+        <https://demo.local/ecat#hasSKU>  <https://demo.local/ecat#sku8> .
+
+<https://demo.local/ecat#auth1>
+        <https://demo.local/ecat#validUntil>  "2027-06-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#auth2>
+        <https://demo.local/ecat#validUntil>  "2026-09-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#cert1>
+        <https://demo.local/ecat#validUntil>  "2027-03-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#cert2>
+        <https://demo.local/ecat#validUntil>  "2026-12-31"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat#auth1>
+        <https://demo.local/ecat#coversBrand>  <https://demo.local/ecat#brand1> .
+
+<https://demo.local/ecat#auth2>
+        <https://demo.local/ecat#coversBrand>  <https://demo.local/ecat#brand2> .
+
+<https://demo.local/ecat#enr1>
+        <https://demo.local/ecat#campaign>  "618大促" .
+
+<https://demo.local/ecat#enr2>
+        <https://demo.local/ecat#campaign>  "618大促" .
+
+<https://demo.local/ecat#enr3>
+        <https://demo.local/ecat#campaign>  "618大促" .
+
+<https://demo.local/ecat#cat1>
+        rdf:type  <https://demo.local/ecat#Category> .
+
+<https://demo.local/ecat#cat2>
+        rdf:type  <https://demo.local/ecat#Category> .
+
+<https://demo.local/ecat#cat3>
+        rdf:type  <https://demo.local/ecat#Category> .
+
+<https://demo.local/ecat#cert1>
+        <https://demo.local/ecat#certType>  "质检报告" .
+
+<https://demo.local/ecat#cert2>
+        <https://demo.local/ecat#certType>  "质检报告" .
+
+<https://demo.local/ecat#merchant1>
+        <https://demo.local/ecat#holdsAuthorization>  <https://demo.local/ecat#auth1> .
+
+<https://demo.local/ecat#merchant2>
+        <https://demo.local/ecat#holdsAuthorization>  <https://demo.local/ecat#auth2> .
+
+<https://demo.local/ecat#sku1>
+        <https://demo.local/ecat#minPrice30d>  459.00 .
+
+<https://demo.local/ecat#sku2>
+        <https://demo.local/ecat#minPrice30d>  279.00 .
+
+<https://demo.local/ecat#sku3>
+        <https://demo.local/ecat#minPrice30d>  379.00 .
+
+<https://demo.local/ecat#sku4>
+        <https://demo.local/ecat#minPrice30d>  439.00 .
+
+<https://demo.local/ecat#sku5>
+        <https://demo.local/ecat#minPrice30d>  349.00 .
+
+<https://demo.local/ecat#sku6>
+        <https://demo.local/ecat#minPrice30d>  319.00 .
+
+<https://demo.local/ecat#sku7>
+        <https://demo.local/ecat#minPrice30d>  249.00 .
+
+<https://demo.local/ecat#sku8>
+        <https://demo.local/ecat#minPrice30d>  189.00 .
+
+<https://demo.local/ecat#enr1>
+        rdf:type  <https://demo.local/ecat#PromoEnrollment> .
+
+<https://demo.local/ecat#enr2>
+        rdf:type  <https://demo.local/ecat#PromoEnrollment> .
+
+<https://demo.local/ecat#enr3>
+        rdf:type  <https://demo.local/ecat#PromoEnrollment> .
+
+<https://demo.local/ecat#cat1>
+        <http://www.w3.org/2000/01/rdf-schema#label>  "运动户外" .
+
+<https://demo.local/ecat#cat2>
+        <http://www.w3.org/2000/01/rdf-schema#label>  "跑步装备" .
+
+<https://demo.local/ecat#cat3>
+        <http://www.w3.org/2000/01/rdf-schema#label>  "跑步鞋" .
+
+<https://demo.local/ecat#brand1>
+        <http://www.w3.org/2000/01/rdf-schema#label>  "StrideMax" .
+
+<https://demo.local/ecat#brand2>
+        <http://www.w3.org/2000/01/rdf-schema#label>  "PaceFox" .
+
+<https://demo.local/ecat#merchant1>
+        <http://www.w3.org/2000/01/rdf-schema#label>  "Alpha旗舰店" .
+
+<https://demo.local/ecat#merchant2>
+        <http://www.w3.org/2000/01/rdf-schema#label>  "Beta专营店" .
+
+<https://demo.local/ecat#sku3>
+        <https://demo.local/ecat#grossMargin>  0.10 .
+
+<https://demo.local/ecat#sku8>
+        <https://demo.local/ecat#grossMargin>  0.12 .
+
+<https://demo.local/ecat#sku2>
+        <https://demo.local/ecat#grossMargin>  0.18 .
+
+<https://demo.local/ecat#sku7>
+        <https://demo.local/ecat#grossMargin>  0.19 .
+
+<https://demo.local/ecat#sku6>
+        <https://demo.local/ecat#grossMargin>  0.20 .
+
+<https://demo.local/ecat#sku1>
+        <https://demo.local/ecat#grossMargin>  0.22 .
+
+<https://demo.local/ecat#sku5>
+        <https://demo.local/ecat#grossMargin>  0.25 .
+
+<https://demo.local/ecat#sku4>
+        <https://demo.local/ecat#grossMargin>  0.31 .
+
+<https://demo.local/ecat#sku1>
+        <https://demo.local/ecat#soldBy>  <https://demo.local/ecat#merchant1> .
+
+<https://demo.local/ecat#sku2>
+        <https://demo.local/ecat#soldBy>  <https://demo.local/ecat#merchant2> .
+
+<https://demo.local/ecat#sku3>
+        <https://demo.local/ecat#soldBy>  <https://demo.local/ecat#merchant1> .
+
+<https://demo.local/ecat#sku4>
+        <https://demo.local/ecat#soldBy>  <https://demo.local/ecat#merchant2> .
+
+<https://demo.local/ecat#sku5>
+        <https://demo.local/ecat#soldBy>  <https://demo.local/ecat#merchant1> .
+
+<https://demo.local/ecat#sku6>
+        <https://demo.local/ecat#soldBy>  <https://demo.local/ecat#merchant2> .
+
+<https://demo.local/ecat#sku7>
+        <https://demo.local/ecat#soldBy>  <https://demo.local/ecat#merchant1> .
+
+<https://demo.local/ecat#sku8>
+        <https://demo.local/ecat#soldBy>  <https://demo.local/ecat#merchant2> .
+
+<https://demo.local/ecat#sku1>
+        rdf:type  <https://demo.local/ecat#SKU> .
+
+<https://demo.local/ecat#sku2>
+        rdf:type  <https://demo.local/ecat#SKU> .
+
+<https://demo.local/ecat#sku3>
+        rdf:type  <https://demo.local/ecat#SKU> .
+
+<https://demo.local/ecat#sku4>
+        rdf:type  <https://demo.local/ecat#SKU> .
+
+<https://demo.local/ecat#sku5>
+        rdf:type  <https://demo.local/ecat#SKU> .
+
+<https://demo.local/ecat#sku6>
+        rdf:type  <https://demo.local/ecat#SKU> .
+
+<https://demo.local/ecat#sku7>
+        rdf:type  <https://demo.local/ecat#SKU> .
+
+<https://demo.local/ecat#sku8>
+        rdf:type  <https://demo.local/ecat#SKU> .
+
+# ---- NL 录入 2026-08-29 23:40 ----
+@prefix : <https://demo.local/ecat#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+:storm3 a :Product    ; :status "ACTIVE"    ; :hasSKU :storm3_sku    ; :madeBy :brand1 .
+:storm3_sku a :SKU    ; :price 649    ; :gmv30d 80000    ; :grossMargin 0.28    ; :inventoryDays 18    ; :listedDate "2026-08-20"^^xsd:date    ; :isSKUOf :storm3    ; :belongsToCategory :cat3    ; :soldBy :merchant1 .

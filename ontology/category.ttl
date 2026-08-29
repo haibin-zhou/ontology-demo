@@ -1,0 +1,106 @@
+# =============================================================================
+# 跑步品类运营本体（T-Box）— OWL 2 RL
+# 场景：电商品类运营 · 大促选品 / 滞销治理 / 合规审查
+# 说明：数值阈值类业务规则（滞销线、达标线）刻意不进 OWL 公理，
+#       放在 rules/thresholds.json，运营改阈值不需要发本体版本。
+# =============================================================================
+@prefix :      <https://demo.local/ecat#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<https://demo.local/ecat> a owl:Ontology ;
+    owl:versionIRI  <https://demo.local/ecat/1.0.0> ;
+    owl:versionInfo "1.0.0" ;
+    rdfs:label "跑步品类运营本体" ;
+    rdfs:comment "v1.0.0 大促选品最小闭环：商品/类目/品牌/商家/资质/促销" .
+
+# ---------------------------------------------------------------- 类（Classes）
+:Product            a owl:Class ; rdfs:label "商品SPU" .
+:SKU                a owl:Class ; rdfs:label "SKU" .
+:Brand              a owl:Class ; rdfs:label "品牌" .
+:Category           a owl:Class ; rdfs:label "类目" .
+:Merchant           a owl:Class ; rdfs:label "商家" .
+:Authorization      a owl:Class ; rdfs:label "品牌授权书" .
+:Certification      a owl:Class ; rdfs:label "质检/资质证书" .
+:PromoEnrollment    a owl:Class ; rdfs:label "促销报名单" .
+
+# 状态子类：互斥，推理机/治理检查可据此发现矛盾数据
+:ActiveProduct      a owl:Class ; rdfs:subClassOf :Product ; rdfs:label "在售商品" .
+:DelistedProduct    a owl:Class ; rdfs:subClassOf :Product ; rdfs:label "已下架商品" ;
+                    owl:disjointWith :ActiveProduct .
+
+# 推导子类（由规则层打标，本体中声明语义位置）
+:SlowMovingProduct    a owl:Class ; rdfs:subClassOf :Product ; rdfs:label "滞销品" .
+:PromoEligibleProduct a owl:Class ; rdfs:subClassOf :Product ; rdfs:label "大促达标品" .
+:NewProduct           a owl:Class ; rdfs:subClassOf :Product ; rdfs:label "新品" .
+
+# ------------------------------------------------------------ 对象属性（关系）
+:subCategoryOf a owl:ObjectProperty , owl:TransitiveProperty ;
+    rdfs:domain :Category ; rdfs:range :Category ;
+    rdfs:label "子类目" ;
+    rdfs:comment "传递性：跑步鞋⊂跑步装备⊂运动户外，查大类自动覆盖子类" .
+
+:hasSKU  a owl:ObjectProperty ; rdfs:domain :Product ; rdfs:range :SKU .
+:isSKUOf a owl:ObjectProperty ; owl:inverseOf :hasSKU ;
+    rdfs:domain :SKU ; rdfs:range :Product .
+
+:madeBy a owl:ObjectProperty ; rdfs:domain :Product ; rdfs:range :Brand ;
+    rdfs:label "品牌归属" .
+
+:belongsToCategory a owl:ObjectProperty ;
+    rdfs:domain :SKU ; rdfs:range :Category ;
+    rdfs:label "所属叶子类目" .
+
+:soldBy a owl:ObjectProperty ; rdfs:domain :SKU ; rdfs:range :Merchant .
+
+:hasCertification a owl:ObjectProperty ;
+    rdfs:domain :SKU ; rdfs:range :Certification ;
+    rdfs:label "挂载资质" .
+
+:holdsAuthorization a owl:ObjectProperty ;
+    rdfs:domain :Merchant ; rdfs:range :Authorization .
+:coversBrand a owl:ObjectProperty ;
+    rdfs:domain :Authorization ; rdfs:range :Brand .
+
+# 属性链①：商家 —持有授权书→ 授权书 —覆盖品牌→ 品牌  ⇒  商家被授权经营该品牌
+:authorizedBrand a owl:ObjectProperty ;
+    rdfs:label "被授权品牌（推导）" ;
+    owl:propertyChainAxiom ( :holdsAuthorization :coversBrand ) .
+
+# 属性链②：SKU —属于→ SPU —品牌归属→ 品牌  ⇒  SKU 的品牌（推导）
+:skuBrand a owl:ObjectProperty ;
+    rdfs:label "SKU品牌（推导）" ;
+    owl:propertyChainAxiom ( :isSKUOf :madeBy ) .
+
+:enrollsSKU a owl:ObjectProperty ;
+    rdfs:domain :PromoEnrollment ; rdfs:range :SKU .
+
+# ------------------------------------------------------------ 数据属性（字段）
+:sales30d      a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:integer ;
+    rdfs:label "近30天销量(件)" .
+:grossMargin   a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:decimal ;
+    rdfs:label "毛利率(0-1)" .
+:inventoryDays a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:integer ;
+    rdfs:label "库存周转天数" .
+:listedDate    a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:date ;
+    rdfs:label "上架日期" .
+:price         a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:decimal .
+:minPrice30d   a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:decimal ;
+    rdfs:label "近30天最低成交价（价保基线）" .
+:promoPrice    a owl:DatatypeProperty ; rdfs:domain :PromoEnrollment ; rdfs:range xsd:decimal .
+:campaign      a owl:DatatypeProperty ; rdfs:domain :PromoEnrollment ; rdfs:range xsd:string .
+:validUntil    a owl:DatatypeProperty ; rdfs:range xsd:date ;
+    rdfs:label "有效期至（证书/授权书通用）" .
+:certType      a owl:DatatypeProperty ; rdfs:domain :Certification ; rdfs:range xsd:string .
+
+# ------------------------------------------------- 类级公理（OWL 语义，非校验）
+# 注意：OWL 是开放世界假设，下面的限制用于推理而非非空校验；
+#      "必填/唯一/格式"这类封闭世界校验一律放 SHACL（shapes.ttl）。
+
+# 语义声明：大促达标品的每个 SKU 都应挂资质（供推理与文档，不强制）
+:PromoEligibleProduct rdfs:subClassOf [
+    a owl:Restriction ; owl:onProperty :hasCertification ;
+    owl:minCardinality "1"^^xsd:nonNegativeInteger
+] .
+

@@ -1,0 +1,11 @@
+@prefix : <https://demo.local/ecat#> .
+
+# 类目树（只写相邻两层）
+:cat_running_shoes :subCategoryOf :cat_running_gear .
+:cat_running_gear  :subCategoryOf :cat_sports_outdoor .
+
+# 商品：只写正向 hasSKU，从不写反向
+:p1 :hasSKU :sku1 ; :madeBy :brand_stride .
+
+# 一个"捣蛋鬼"：既在售又下架（供 disjoint 演示）
+:bad_sku a :ActiveProduct , :DelistedProduct .

@@ -1,0 +1,32 @@
+# =============================================================================
+# 供应商合规审查 本体（T-Box）
+# 建设流程见 framework/README.md §3（S4 类骨架 → S5 属性 → S6 公理）
+# 规范：类 PascalCase、属性 camelCase、每个术语带 rdfs:label
+# =============================================================================
+@prefix :      <https://example.com/sc#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.com/sc> a owl:Ontology ;
+    owl:versionInfo "0.1.0" ;
+    rdfs:label "供应商合规审查本体" ;
+    rdfs:comment "S4 起步骨架。决策记录写在各节注释里。" .
+
+# ---- S4 实体类（示例，按 CQ 替换） ---------------------------------------------
+:EntityA a owl:Class ; rdfs:label "实体A" .
+:EntityB a owl:Class ; rdfs:label "实体B" .
+
+# ---- S5 对象属性（关系） ---------------------------------------------------------
+:relatesTo a owl:ObjectProperty ; rdfs:domain :EntityA ; rdfs:range :EntityB ;
+    rdfs:label "关联" .
+
+# ---- S5 数据属性（字段） ---------------------------------------------------------
+:sampleMetric a owl:DatatypeProperty ; rdfs:domain :EntityA ; rdfs:range xsd:decimal ;
+    rdfs:label "示例指标" .
+
+# ---- S6 规则公理（按需勾选：传递/互逆/属性链/互斥） -------------------------------
+# :parentOf a owl:ObjectProperty , owl:TransitiveProperty .       # 传递
+# :hasA owl:inverseOf :belongsToA .                                # 互逆
+# :grandRel owl:propertyChainAxiom ( :rel1 :rel2 ) .               # 属性链
+# :ClassX owl:disjointWith :ClassY .                               # 互斥

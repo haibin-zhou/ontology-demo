@@ -1,0 +1,23 @@
+@prefix :      <https://demo.local/ecat#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+# 脏数据：四种违规各埋一个
+:sku_bad1 a :SKU ;
+    :belongsToCategory :cat_running_shoes ;
+    :price "499.00"^^xsd:decimal .           # 违规1：没名字
+
+:sku_bad2 a :SKU ;
+    :name "无类目鞋" ;
+    :price "299.00"^^xsd:decimal .           # 违规2：没挂类目
+
+:sku_bad3 a :SKU ;
+    :name "价格可疑鞋" ;
+    :belongsToCategory :cat_running_shoes ;
+    :price "-9.9"^^xsd:decimal .             # 违规3：价格不是正数
+
+:sku_bad4 a :SKU ;
+    :name "击穿价保鞋" ;
+    :belongsToCategory :cat_running_shoes ;
+    :price "899.00"^^xsd:decimal ;
+    :promoPrice "799.00"^^xsd:decimal ;
+    :minPrice30d "699.00"^^xsd:decimal .     # 违规4：促销价 799 > 30天最低价 699

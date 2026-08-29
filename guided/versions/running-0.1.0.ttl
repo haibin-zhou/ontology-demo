@@ -1,0 +1,88 @@
+# =============================================================================
+# 跑步品类运营本体（引导共建版）
+# 决策记录：
+#   S1 场景：跑步品类运营（大促选品/滞销治理/合规）
+#   S2 六个 CQ 全部保留（guided/cq/competency_questions.md）
+#   S3 术语表裁决：动销=GMV(gmv30d)、新品=上架≤30天、滞销=周转+动销
+#   S4 类目树=实例数据（不进本体）；商品状态=字段（非类），枚举约束移交 SHACL
+# =============================================================================
+@prefix :      <https://demo.local/ecat#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+<https://demo.local/ecat/guided> a owl:Ontology ;
+    owl:versionInfo "0.1.0" ;
+    rdfs:label "跑步品类运营本体（引导共建版）" ;
+    rdfs:comment "S4：类骨架。状态为字段、类目树为实例数据、推导类占语义位。" .
+
+# ---- 实体类（对应术语表） -----------------------------------------------------
+:Product            a owl:Class ; rdfs:label "商品SPU" ;
+    rdfs:comment "状态建模为字段 status（ACTIVE/DELISTED），枚举约束见 shapes.ttl" .
+:SKU                a owl:Class ; rdfs:label "SKU" .
+:Category           a owl:Class ; rdfs:label "类目" ;
+    rdfs:comment "类目树是实例数据（subCategoryOf 边），加类目不发本体版本" .
+:Brand              a owl:Class ; rdfs:label "品牌" .
+:Merchant           a owl:Class ; rdfs:label "商家" .
+:Authorization      a owl:Class ; rdfs:label "品牌授权书" .
+:Certification      a owl:Class ; rdfs:label "质检报告" .
+:PromoEnrollment    a owl:Class ; rdfs:label "促销报名单" .
+
+# ---- 推导类（只占语义位置，实例归属由规则打标，不占数据） ------------------------
+:SlowMovingProduct    a owl:Class ; rdfs:subClassOf :Product ; rdfs:label "滞销品" ;
+    rdfs:comment "口径见术语表：周转>60天 且 近30天GMV<阈值（S3 裁决）" .
+:PromoEligibleProduct a owl:Class ; rdfs:subClassOf :Product ; rdfs:label "大促达标品" ;
+    rdfs:comment "GMV达标 + 毛利达标 + 资质有效" .
+:NewProduct           a owl:Class ; rdfs:subClassOf :Product ; rdfs:label "新品" ;
+    rdfs:comment "上架≤30天（S3 裁决：按上架时间）" .
+
+# ---- S5：对象属性（用户确认全部接受） -------------------------------------------
+:hasSKU  a owl:ObjectProperty ; rdfs:domain :Product ; rdfs:range :SKU .
+:isSKUOf a owl:ObjectProperty ; owl:inverseOf :hasSKU ;
+    rdfs:domain :SKU ; rdfs:range :Product .
+:subCategoryOf a owl:ObjectProperty , owl:TransitiveProperty ;
+    rdfs:domain :Category ; rdfs:range :Category ; rdfs:label "子类目" ;
+    rdfs:comment "S6 裁决：传递。查父类目自动含全部子类目实例（支撑 CQ1/CQ2）" .
+:madeBy a owl:ObjectProperty ; rdfs:domain :Product ; rdfs:range :Brand ;
+    rdfs:label "品牌归属" .
+:belongsToCategory a owl:ObjectProperty ;
+    rdfs:domain :SKU ; rdfs:range :Category ; rdfs:label "所属叶子类目" .
+:soldBy a owl:ObjectProperty ; rdfs:domain :SKU ; rdfs:range :Merchant .
+:holdsAuthorization a owl:ObjectProperty ;
+    rdfs:domain :Merchant ; rdfs:range :Authorization .
+:coversBrand a owl:ObjectProperty ;
+    rdfs:domain :Authorization ; rdfs:range :Brand .
+:hasCertification a owl:ObjectProperty ;
+    rdfs:domain :SKU ; rdfs:range :Certification ; rdfs:label "挂载资质" .
+:enrollsSKU a owl:ObjectProperty ;
+    rdfs:domain :PromoEnrollment ; rdfs:range :SKU .
+
+# ---- S5：数据属性 ---------------------------------------------------------------
+:gmv30d        a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:decimal ;
+    rdfs:label "近30天GMV(元)" ; rdfs:comment "动销口径（S3 裁决：支付口径GMV）" .
+:grossMargin   a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:decimal .
+:inventoryDays a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:integer .
+:listedDate    a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:date .
+:price         a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:decimal .
+:minPrice30d   a owl:DatatypeProperty ; rdfs:domain :SKU ; rdfs:range xsd:decimal ;
+    rdfs:label "近30天最低成交价（价保基线）" .
+:promoPrice    a owl:DatatypeProperty ; rdfs:domain :PromoEnrollment ; rdfs:range xsd:decimal .
+:campaign      a owl:DatatypeProperty ; rdfs:domain :PromoEnrollment ; rdfs:range xsd:string .
+:validUntil    a owl:DatatypeProperty ; rdfs:range xsd:date ;
+    rdfs:label "有效期至（证书/授权书通用）" .
+:certType      a owl:DatatypeProperty ; rdfs:domain :Certification ; rdfs:range xsd:string .
+:status        a owl:DatatypeProperty ; rdfs:domain :Product ; rdfs:range xsd:string ;
+    rdfs:comment "S4 裁决：状态建成字段；取值 ACTIVE/DELISTED 由 SHACL 约束" .
+
+# ---- S6：规则层公理（用户勾选全部 4 条） -----------------------------------------
+# ② SKU品牌链：SKU --属于--> SPU --品牌--> 品牌  ⇒  SKU 的品牌（支撑 CQ4）
+:skuBrand a owl:ObjectProperty ; rdfs:label "SKU品牌（推导）" ;
+    owl:propertyChainAxiom ( :isSKUOf :madeBy ) .
+
+# ③ 授权链：商家 --持有--> 授权书 --覆盖--> 品牌  ⇒  被授权品牌（支撑 CQ4）
+:authorizedBrand a owl:ObjectProperty ; rdfs:label "被授权品牌（推导）" ;
+    owl:propertyChainAxiom ( :holdsAuthorization :coversBrand ) .
+
+# ④ 报名单追责链：报名单 --报名SKU--> SKU --销售方--> 商家  ⇒  责任商家（支撑 CQ3）
+:enrollmentMerchant a owl:ObjectProperty ; rdfs:label "报名责任商家（推导）" ;
+    owl:propertyChainAxiom ( :enrollsSKU :soldBy ) .

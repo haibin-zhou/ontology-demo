@@ -1,0 +1,7 @@
+# Q1 FILTER：价格 300~600 且销量过百
+PREFIX :    <https://demo.local/ecat#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT ?name ?price ?sales WHERE {
+  ?s a :SKU ; :name ?name ; :price ?price ; :sales30d ?sales .
+  FILTER(?price >= 300 && ?price <= 600 && ?sales > 100)
+}

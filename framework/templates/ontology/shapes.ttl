@@ -1,0 +1,13 @@
+# SHACL 硬规则（S8 产物）— 封闭世界校验；OWL 管推理，这里管拦数据
+@prefix :      <{{BASE_IRI}}> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+# 示例：实体 A 必须有关联
+:EntityAShape a sh:NodeShape ;
+    sh:targetClass :EntityA ;
+    sh:property [
+        sh:path :relatesTo ;
+        sh:minCount 1 ;
+        sh:message "EntityA 必须至少关联一个 EntityB" ;
+    ] .

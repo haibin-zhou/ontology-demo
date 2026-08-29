@@ -1,0 +1,8 @@
+# CQ2: 哪些 SKU 是滞销品（库存周转超阈值且动销不达标）→ 进清仓通道
+PREFIX : <https://demo.local/ecat#>
+SELECT DISTINCT ?sku WHERE {
+  ?sku a :SKU ;
+       :inventoryDays ?d ;
+       :sales30d ?s .
+  FILTER(?d > $INV_GT && ?s < $SALES_LT)
+}

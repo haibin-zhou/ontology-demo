@@ -1,0 +1,10 @@
+@prefix :      <https://demo.local/ecat#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+# 干净数据：全部合规
+:sku_ok a :SKU ;
+    :name "闪电跑鞋" ;
+    :belongsToCategory :cat_running_shoes ;
+    :price "499.00"^^xsd:decimal ;
+    :promoPrice "449.00"^^xsd:decimal ;
+    :minPrice30d "459.00"^^xsd:decimal .     # 449 ≤ 459，价保安全

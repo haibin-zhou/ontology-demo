@@ -1,0 +1,85 @@
+[PrefixDeclaration]
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+owl:		http://www.w3.org/2002/07/owl#
+xsd:		http://www.w3.org/2001/XMLSchema#
+obda:		https://w3id.org/obda/vocabulary#
+
+[MappingDeclaration] @collection [[
+mappingId	MAPPING-ID1
+target		<https://demo.local/ecat/SKU/ID={ID}> a <https://demo.local/ecat/SKU> ; <https://demo.local/ecat/SKU#ID> {ID}^^xsd:integer ; <https://demo.local/ecat/SKU#PRODUCT_ID> {PRODUCT_ID}^^xsd:integer ; <https://demo.local/ecat/SKU#CATEGORY_ID> {CATEGORY_ID}^^xsd:integer ; <https://demo.local/ecat/SKU#MERCHANT_ID> {MERCHANT_ID}^^xsd:integer ; <https://demo.local/ecat/SKU#PRICE> {PRICE}^^xsd:decimal ; <https://demo.local/ecat/SKU#SALES_30D> {SALES_30D}^^xsd:integer ; <https://demo.local/ecat/SKU#INVENTORY_DAYS> {INVENTORY_DAYS}^^xsd:integer ; <https://demo.local/ecat/SKU#MIN_PRICE_30D> {MIN_PRICE_30D}^^xsd:decimal ; <https://demo.local/ecat/SKU#LISTED_DATE> {LISTED_DATE}^^xsd:date . 
+source		SELECT * FROM "SKU"
+
+mappingId	MAPPING-ID2
+target		<https://demo.local/ecat/SKU/ID={SKU_ID}> <https://demo.local/ecat/SKU#ref-CATEGORY_ID> <https://demo.local/ecat/CATEGORY/ID={CATEGORY_ID}> . 
+source		SELECT "SKU"."ID" AS "SKU_ID", "CATEGORY"."ID" AS "CATEGORY_ID" FROM "SKU", "CATEGORY" WHERE "SKU"."CATEGORY_ID" = "CATEGORY"."ID"
+
+mappingId	MAPPING-ID3
+target		<https://demo.local/ecat/SKU/ID={SKU_ID}> <https://demo.local/ecat/SKU#ref-MERCHANT_ID> <https://demo.local/ecat/MERCHANT/ID={MERCHANT_ID}> . 
+source		SELECT "SKU"."ID" AS "SKU_ID", "MERCHANT"."ID" AS "MERCHANT_ID" FROM "SKU", "MERCHANT" WHERE "SKU"."MERCHANT_ID" = "MERCHANT"."ID"
+
+mappingId	MAPPING-ID4
+target		<https://demo.local/ecat/SKU/ID={SKU_ID}> <https://demo.local/ecat/SKU#ref-PRODUCT_ID> <https://demo.local/ecat/PRODUCT/ID={PRODUCT_ID}> . 
+source		SELECT "SKU"."ID" AS "SKU_ID", "PRODUCT"."ID" AS "PRODUCT_ID" FROM "SKU", "PRODUCT" WHERE "SKU"."PRODUCT_ID" = "PRODUCT"."ID"
+
+mappingId	MAPPING-ID5
+target		<https://demo.local/ecat/BRAND/ID={ID}> a <https://demo.local/ecat/BRAND> ; <https://demo.local/ecat/BRAND#ID> {ID}^^xsd:integer ; <https://demo.local/ecat/BRAND#NAME> {NAME}^^xsd:string ; <https://demo.local/ecat/BRAND#COUNTRY> {COUNTRY}^^xsd:string . 
+source		SELECT * FROM "BRAND"
+
+mappingId	MAPPING-ID6
+target		<https://demo.local/ecat/PRODUCT/ID={ID}> a <https://demo.local/ecat/PRODUCT> ; <https://demo.local/ecat/PRODUCT#ID> {ID}^^xsd:integer ; <https://demo.local/ecat/PRODUCT#NAME> {NAME}^^xsd:string ; <https://demo.local/ecat/PRODUCT#BRAND_ID> {BRAND_ID}^^xsd:integer ; <https://demo.local/ecat/PRODUCT#STATUS> {STATUS}^^xsd:string . 
+source		SELECT * FROM "PRODUCT"
+
+mappingId	MAPPING-ID7
+target		<https://demo.local/ecat/PRODUCT/ID={PRODUCT_ID}> <https://demo.local/ecat/PRODUCT#ref-BRAND_ID> <https://demo.local/ecat/BRAND/ID={BRAND_ID}> . 
+source		SELECT "PRODUCT"."ID" AS "PRODUCT_ID", "BRAND"."ID" AS "BRAND_ID" FROM "PRODUCT", "BRAND" WHERE "PRODUCT"."BRAND_ID" = "BRAND"."ID"
+
+mappingId	MAPPING-ID8
+target		<https://demo.local/ecat/BRAND_AUTHORIZATION/ID={ID}> a <https://demo.local/ecat/BRAND_AUTHORIZATION> ; <https://demo.local/ecat/BRAND_AUTHORIZATION#ID> {ID}^^xsd:integer ; <https://demo.local/ecat/BRAND_AUTHORIZATION#MERCHANT_ID> {MERCHANT_ID}^^xsd:integer ; <https://demo.local/ecat/BRAND_AUTHORIZATION#BRAND_ID> {BRAND_ID}^^xsd:integer ; <https://demo.local/ecat/BRAND_AUTHORIZATION#VALID_UNTIL> {VALID_UNTIL}^^xsd:date . 
+source		SELECT * FROM "BRAND_AUTHORIZATION"
+
+mappingId	MAPPING-ID9
+target		<https://demo.local/ecat/BRAND_AUTHORIZATION/ID={BRAND_AUTHORIZATION_ID}> <https://demo.local/ecat/BRAND_AUTHORIZATION#ref-BRAND_ID> <https://demo.local/ecat/BRAND/ID={BRAND_ID}> . 
+source		SELECT "BRAND_AUTHORIZATION"."ID" AS "BRAND_AUTHORIZATION_ID", "BRAND"."ID" AS "BRAND_ID" FROM "BRAND_AUTHORIZATION", "BRAND" WHERE "BRAND_AUTHORIZATION"."BRAND_ID" = "BRAND"."ID"
+
+mappingId	MAPPING-ID10
+target		<https://demo.local/ecat/BRAND_AUTHORIZATION/ID={BRAND_AUTHORIZATION_ID}> <https://demo.local/ecat/BRAND_AUTHORIZATION#ref-MERCHANT_ID> <https://demo.local/ecat/MERCHANT/ID={MERCHANT_ID}> . 
+source		SELECT "BRAND_AUTHORIZATION"."ID" AS "BRAND_AUTHORIZATION_ID", "MERCHANT"."ID" AS "MERCHANT_ID" FROM "BRAND_AUTHORIZATION", "MERCHANT" WHERE "BRAND_AUTHORIZATION"."MERCHANT_ID" = "MERCHANT"."ID"
+
+mappingId	MAPPING-ID11
+target		<https://demo.local/ecat/MERCHANT/ID={ID}> a <https://demo.local/ecat/MERCHANT> ; <https://demo.local/ecat/MERCHANT#ID> {ID}^^xsd:integer ; <https://demo.local/ecat/MERCHANT#NAME> {NAME}^^xsd:string . 
+source		SELECT * FROM "MERCHANT"
+
+mappingId	MAPPING-ID12
+target		<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID={SKU_ID};CERT_ID={CERT_ID}> a <https://demo.local/ecat/SKU_CERTIFICATION> ; <https://demo.local/ecat/SKU_CERTIFICATION#SKU_ID> {SKU_ID}^^xsd:integer ; <https://demo.local/ecat/SKU_CERTIFICATION#CERT_ID> {CERT_ID}^^xsd:integer . 
+source		SELECT * FROM "SKU_CERTIFICATION"
+
+mappingId	MAPPING-ID13
+target		<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID={SKU_CERTIFICATION_SKU_ID};CERT_ID={SKU_CERTIFICATION_CERT_ID}> <https://demo.local/ecat/SKU_CERTIFICATION#ref-CERT_ID> <https://demo.local/ecat/CERTIFICATION/ID={CERTIFICATION_ID}> . 
+source		SELECT "SKU_CERTIFICATION"."SKU_ID" AS "SKU_CERTIFICATION_SKU_ID", "SKU_CERTIFICATION"."CERT_ID" AS "SKU_CERTIFICATION_CERT_ID", "CERTIFICATION"."ID" AS "CERTIFICATION_ID" FROM "SKU_CERTIFICATION", "CERTIFICATION" WHERE "SKU_CERTIFICATION"."CERT_ID" = "CERTIFICATION"."ID"
+
+mappingId	MAPPING-ID14
+target		<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID={SKU_CERTIFICATION_SKU_ID};CERT_ID={SKU_CERTIFICATION_CERT_ID}> <https://demo.local/ecat/SKU_CERTIFICATION#ref-SKU_ID> <https://demo.local/ecat/SKU/ID={SKU_ID}> . 
+source		SELECT "SKU_CERTIFICATION"."SKU_ID" AS "SKU_CERTIFICATION_SKU_ID", "SKU_CERTIFICATION"."CERT_ID" AS "SKU_CERTIFICATION_CERT_ID", "SKU"."ID" AS "SKU_ID" FROM "SKU_CERTIFICATION", "SKU" WHERE "SKU_CERTIFICATION"."SKU_ID" = "SKU"."ID"
+
+mappingId	MAPPING-ID15
+target		<https://demo.local/ecat/CERTIFICATION/ID={ID}> a <https://demo.local/ecat/CERTIFICATION> ; <https://demo.local/ecat/CERTIFICATION#ID> {ID}^^xsd:integer ; <https://demo.local/ecat/CERTIFICATION#CERT_TYPE> {CERT_TYPE}^^xsd:string ; <https://demo.local/ecat/CERTIFICATION#VALID_UNTIL> {VALID_UNTIL}^^xsd:date . 
+source		SELECT * FROM "CERTIFICATION"
+
+mappingId	MAPPING-ID16
+target		<https://demo.local/ecat/CATEGORY/ID={ID}> a <https://demo.local/ecat/CATEGORY> ; <https://demo.local/ecat/CATEGORY#ID> {ID}^^xsd:integer ; <https://demo.local/ecat/CATEGORY#NAME> {NAME}^^xsd:string ; <https://demo.local/ecat/CATEGORY#PARENT_ID> {PARENT_ID}^^xsd:integer . 
+source		SELECT * FROM "CATEGORY"
+
+mappingId	MAPPING-ID17
+target		<https://demo.local/ecat/CATEGORY/ID={CATEGORY_FK_ID}> <https://demo.local/ecat/CATEGORY#ref-PARENT_ID> <https://demo.local/ecat/CATEGORY/ID={CATEGORY_FKR_ID}> . 
+source		SELECT "CATEGORY_FK"."ID" AS "CATEGORY_FK_ID", "CATEGORY_FKR"."ID" AS "CATEGORY_FKR_ID" FROM "CATEGORY" AS "CATEGORY_FK", "CATEGORY" AS "CATEGORY_FKR" WHERE "CATEGORY_FK"."PARENT_ID" = "CATEGORY_FKR"."ID"
+
+mappingId	MAPPING-ID18
+target		<https://demo.local/ecat/PROMO_ENROLLMENT/ID={ID}> a <https://demo.local/ecat/PROMO_ENROLLMENT> ; <https://demo.local/ecat/PROMO_ENROLLMENT#ID> {ID}^^xsd:integer ; <https://demo.local/ecat/PROMO_ENROLLMENT#CAMPAIGN> {CAMPAIGN}^^xsd:string ; <https://demo.local/ecat/PROMO_ENROLLMENT#SKU_ID> {SKU_ID}^^xsd:integer ; <https://demo.local/ecat/PROMO_ENROLLMENT#PROMO_PRICE> {PROMO_PRICE}^^xsd:decimal . 
+source		SELECT * FROM "PROMO_ENROLLMENT"
+
+mappingId	MAPPING-ID19
+target		<https://demo.local/ecat/PROMO_ENROLLMENT/ID={PROMO_ENROLLMENT_ID}> <https://demo.local/ecat/PROMO_ENROLLMENT#ref-SKU_ID> <https://demo.local/ecat/SKU/ID={SKU_ID}> . 
+source		SELECT "PROMO_ENROLLMENT"."ID" AS "PROMO_ENROLLMENT_ID", "SKU"."ID" AS "SKU_ID" FROM "PROMO_ENROLLMENT", "SKU" WHERE "PROMO_ENROLLMENT"."SKU_ID" = "SKU"."ID"
+]]
+

@@ -1,0 +1,40 @@
+@prefix :      <https://demo.local/ecat#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+:SKU a <http://www.w3.org/2002/07/owl#Class> .
+
+# ---- 第一级：结构约束（必填、唯一、类型）----------------------------------------
+:SKUShape a sh:NodeShape ;
+    sh:targetClass :SKU ;
+    sh:property [
+        sh:path :name ;
+        sh:minCount 1 ;                      # 必填
+        sh:message "SKU 必须有名字" ;
+    ] ;
+    sh:property [
+        sh:path :belongsToCategory ;
+        sh:minCount 1 ; sh:maxCount 1 ;      # 恰好一个类目
+        sh:message "SKU 必须且只能挂一个叶子类目" ;
+    ] ;
+    sh:property [
+        sh:path :price ;
+        sh:datatype xsd:decimal ;            # 类型必须对
+        sh:minExclusive 0 ;                  # 且大于 0
+        sh:message "价格必须是正的小数" ;
+    ] .
+
+# ---- 第二级：跨字段业务规则（SPARQL 约束）----------------------------------------
+# 促销价不得高于近30天最低成交价（价保）
+:PriceGuardShape a sh:NodeShape ;
+    sh:targetClass :SKU ;
+    sh:sparql [
+        sh:message "击穿价保：促销价高于30天最低价" ;
+        sh:prefixes [ sh:prefix : ; sh:namespace "https://demo.local/ecat#"^^xsd:anyURI ] ;
+        sh:select """
+            SELECT $this WHERE {
+                $this :promoPrice ?promo ; :minPrice30d ?min .
+                FILTER(?promo > ?min)
+            }
+        """ ;
+    ] .

@@ -1,0 +1,106 @@
+# =============================================================================
+# 实例数据（A-Box）— 跑步品类，基准日 2026-08-28
+# 故意埋了 4 类"脏数据"用于演示治理/校验能力：
+#   sku7  同时是"在售"和"已下架"（逻辑矛盾，OWL disjoint 检测）
+#   enr2  报名的 sku4 促销价击穿价保（SHACL）
+#   enr3  报名的 sku6 无资质证书（SHACL）
+#   sku5  缺少所属类目（SHACL + 漂移指标）
+# =============================================================================
+@prefix :      <https://demo.local/ecat#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+# ---- 类目树 -----------------------------------------------------------------
+:cat_running_shoes a :Category ; :subCategoryOf :cat_running_gear ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "跑步鞋" .
+:cat_running_gear  a :Category ; :subCategoryOf :cat_sports_outdoor ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "跑步装备" .
+:cat_sports_outdoor a :Category ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "运动户外" .
+
+# ---- 品牌 / 商家 / 授权 -------------------------------------------------------
+:brand_stride a :Brand ; <http://www.w3.org/2000/01/rdf-schema#label> "StrideMax" .
+:brand_pace   a :Brand ; <http://www.w3.org/2000/01/rdf-schema#label> "PaceFox" .
+
+:m_alpha a :Merchant ; :holdsAuthorization :auth_alpha_stride .
+:auth_alpha_stride a :Authorization ;
+    :coversBrand :brand_stride ;
+    :validUntil "2027-06-30"^^xsd:date .          # 有效期充足
+
+:m_beta a :Merchant ; :holdsAuthorization :auth_beta_pace .
+:auth_beta_pace a :Authorization ;
+    :coversBrand :brand_pace ;
+    :validUntil "2026-09-10"^^xsd:date .          # 30 天内到期 → CQ4 预警
+
+# ---- 证书 ---------------------------------------------------------------------
+:cert_q1 a :Certification ; :certType "质检报告" ;
+    :validUntil "2027-03-01"^^xsd:date .
+:cert_q2 a :Certification ; :certType "质检报告" ;
+    :validUntil "2026-12-31"^^xsd:date .
+
+# ---- 商品与 SKU -----------------------------------------------------------------
+:p1 a :ActiveProduct ; :madeBy :brand_stride ; :hasSKU :sku1 .
+:sku1 a :SKU ; :belongsToCategory :cat_running_shoes ; :soldBy :m_alpha ;
+    :sales30d 120 ; :grossMargin 0.22 ; :inventoryDays 20 ;
+    :price 499.00 ; :minPrice30d 459.00 ;
+    :listedDate "2026-05-11"^^xsd:date ;
+    :hasCertification :cert_q1 .
+
+:p2 a :ActiveProduct ; :madeBy :brand_pace ; :hasSKU :sku2 .
+:sku2 a :SKU ; :belongsToCategory :cat_running_shoes ; :soldBy :m_beta ;
+    :sales30d 5 ; :grossMargin 0.18 ; :inventoryDays 95 ;
+    :price 299.00 ; :minPrice30d 279.00 ;
+    :listedDate "2025-11-02"^^xsd:date ;
+    :hasCertification :cert_q2 .
+
+:p3 a :ActiveProduct ; :madeBy :brand_stride ; :hasSKU :sku3 .
+:sku3 a :SKU ; :belongsToCategory :cat_running_shoes ; :soldBy :m_alpha ;
+    :sales30d 80 ; :grossMargin 0.10 ; :inventoryDays 30 ;
+    :price 399.00 ; :minPrice30d 379.00 ;
+    :listedDate "2026-06-20"^^xsd:date ;
+    :hasCertification :cert_q1 .
+
+# sku4：新品、销量高、毛利够 —— 但 enr2 给它报了大促价 449 > 价保基线 439（脏数据）
+:p4 a :ActiveProduct ; :madeBy :brand_pace ; :hasSKU :sku4 .
+:sku4 a :SKU ; :belongsToCategory :cat_running_shoes ; :soldBy :m_beta ;
+    :sales30d 260 ; :grossMargin 0.31 ; :inventoryDays 15 ;
+    :price 469.00 ; :minPrice30d 439.00 ;
+    :listedDate "2026-08-10"^^xsd:date ;
+    :hasCertification :cert_q2 .
+
+# sku5：缺类目（脏数据）
+:p5 a :ActiveProduct ; :madeBy :brand_stride ; :hasSKU :sku5 .
+:sku5 a :SKU ; :soldBy :m_alpha ;
+    :sales30d 45 ; :grossMargin 0.25 ; :inventoryDays 40 ;
+    :price 359.00 ; :minPrice30d 349.00 ;
+    :listedDate "2026-07-01"^^xsd:date .
+
+# sku6：无任何资质证书，却被 enr3 报名大促（脏数据）
+:p6 a :ActiveProduct ; :madeBy :brand_pace ; :hasSKU :sku6 .
+:sku6 a :SKU ; :belongsToCategory :cat_running_shoes ; :soldBy :m_beta ;
+    :sales30d 70 ; :grossMargin 0.20 ; :inventoryDays 25 ;
+    :price 329.00 ; :minPrice30d 319.00 ;
+    :listedDate "2026-04-15"^^xsd:date .
+
+# sku7：状态矛盾（脏数据）—— 同时 ActiveProduct 和 DelistedProduct
+:p7 a :ActiveProduct ; :madeBy :brand_stride ; :hasSKU :sku7 .
+:sku7 a :SKU ; :belongsToCategory :cat_running_shoes ; :soldBy :m_alpha ;
+    :sales30d 60 ; :grossMargin 0.19 ; :inventoryDays 50 ;
+    :price 259.00 ; :minPrice30d 249.00 ;
+    :listedDate "2026-03-08"^^xsd:date ;
+    a :ActiveProduct , :DelistedProduct .
+
+# sku8：滞销品（周转 120 天、月销 3）
+:p8 a :ActiveProduct ; :madeBy :brand_pace ; :hasSKU :sku8 .
+:sku8 a :SKU ; :belongsToCategory :cat_running_shoes ; :soldBy :m_beta ;
+    :sales30d 3 ; :grossMargin 0.12 ; :inventoryDays 120 ;
+    :price 199.00 ; :minPrice30d 189.00 ;
+    :listedDate "2025-09-20"^^xsd:date ;
+    :hasCertification :cert_q2 .
+
+# ---- 促销报名单 -----------------------------------------------------------------
+:enr1 a :PromoEnrollment ; :campaign "618大促" ;
+    :enrollsSKU :sku1 ; :promoPrice 449.00 .      # 合规：449 ≤ 459
+:enr2 a :PromoEnrollment ; :campaign "618大促" ;
+    :enrollsSKU :sku4 ; :promoPrice 449.00 .      # 违规：449 > 价保基线 439
+:enr3 a :PromoEnrollment ; :campaign "618大促" ;
+    :enrollsSKU :sku6 ; :promoPrice 309.00 .      # 违规：sku6 无资质

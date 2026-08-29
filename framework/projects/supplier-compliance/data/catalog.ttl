@@ -1,0 +1,4 @@
+@prefix : <https://example.com/sc#> .
+:a1 a :EntityA ; :relatesTo :b1 ; :sampleMetric 0.5 .
+:a2 a :EntityA .
+:b1 a :EntityB .

@@ -1,0 +1,50 @@
+[PrefixDeclaration]
+:		https://demo.local/ecat#
+
+[MappingDeclaration] @collection [[
+
+mappingId	MAP_category
+target		:cat{id} a :Category ; rdfs:label {name} .
+source		SELECT id, name FROM category
+
+mappingId	MAP_category_tree
+target		:cat{id} :subCategoryOf :cat{parent_id} .
+source		SELECT id, parent_id FROM category WHERE parent_id IS NOT NULL
+
+mappingId	MAP_brand
+target		:brand{id} a :Brand ; rdfs:label {name} .
+source		SELECT id, name FROM brand
+
+mappingId	MAP_merchant
+target		:merchant{id} a :Merchant ; rdfs:label {name} .
+source		SELECT id, name FROM merchant
+
+mappingId	MAP_authorization
+target		:auth{id} a :Authorization ; :validUntil {valid_until}^^xsd:date ; :coversBrand :brand{brand_id} . :merchant{merchant_id} :holdsAuthorization :auth{id} .
+source		SELECT id, merchant_id, brand_id, valid_until FROM brand_authorization
+
+mappingId	MAP_product
+target		:product{id} a :Product ; :status {status} ; :madeBy :brand{brand_id} .
+source		SELECT id, status, brand_id FROM product
+
+mappingId	MAP_product_hasSKU
+target		:product{product_id} :hasSKU :sku{id} .
+source		SELECT id, product_id FROM sku
+
+mappingId	MAP_sku
+target		:sku{id} a :SKU ; :isSKUOf :product{product_id} ; :belongsToCategory :cat{category_id} ; :soldBy :merchant{merchant_id} ; :gmv30d {gmv_30d}^^xsd:decimal ; :grossMargin {gross_margin}^^xsd:decimal ; :inventoryDays {inventory_days}^^xsd:integer ; :price {price}^^xsd:decimal ; :minPrice30d {min_price_30d}^^xsd:decimal ; :listedDate {listed_date}^^xsd:date .
+source		SELECT id, product_id, category_id, merchant_id, gmv_30d, gross_margin, inventory_days, price, min_price_30d, listed_date FROM sku_v
+
+mappingId	MAP_certification
+target		:cert{id} a :Certification ; :certType {cert_type} ; :validUntil {valid_until}^^xsd:date .
+source		SELECT id, cert_type, valid_until FROM certification
+
+mappingId	MAP_sku_cert
+target		:sku{sku_id} :hasCertification :cert{cert_id} .
+source		SELECT sku_id, cert_id FROM sku_certification
+
+mappingId	MAP_promo
+target		:enr{id} a :PromoEnrollment ; :campaign {campaign} ; :promoPrice {promo_price}^^xsd:decimal ; :enrollsSKU :sku{sku_id} .
+source		SELECT id, campaign, sku_id, promo_price FROM promo_enrollment
+
+]]

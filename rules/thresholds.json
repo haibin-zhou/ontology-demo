@@ -1,0 +1,20 @@
+{
+  "comment": "业务阈值集中配置。运营调阈值只改这个文件 + 走审批，不需要改本体。",
+  "asOfDate": "2026-08-28",
+  "promo": {
+    "minSales30d": 50,
+    "minGrossMargin": 0.15,
+    "certValidBeyondDays": 0
+  },
+  "slowMoving": {
+    "inventoryDaysGt": 60,
+    "sales30dLt": 50
+  },
+  "newProduct": {
+    "listedWithinDays": 30,
+    "minSales30d": 100
+  },
+  "authorization": {
+    "expiringWithinDays": 30
+  }
+}

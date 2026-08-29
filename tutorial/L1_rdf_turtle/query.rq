@@ -1,0 +1,7 @@
+PREFIX : <https://demo.local/ecat#>
+SELECT ?sku ?name ?sales WHERE {
+  ?sku a :SKU ; :sales30d ?sales ; :name ?name .
+  FILTER(lang(?name) = "zh")     # 只要中文名
+  FILTER(?sales > 50)            # 只要销量大于 50 的
+}
+ORDER BY DESC(?sales)

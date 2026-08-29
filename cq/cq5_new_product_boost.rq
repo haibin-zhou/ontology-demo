@@ -1,0 +1,9 @@
+# CQ5: 哪些新品（N 天内上架）动销强劲 → 加权扶持名单
+PREFIX :    <https://demo.local/ecat#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT DISTINCT ?sku WHERE {
+  ?sku a :SKU ;
+       :listedDate ?d ;
+       :sales30d ?s .
+  FILTER(?d >= "$NEW_SINCE"^^xsd:date && ?s >= $NEW_MIN_SALES)
+}

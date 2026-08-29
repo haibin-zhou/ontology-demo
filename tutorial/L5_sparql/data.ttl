@@ -1,0 +1,22 @@
+@prefix :      <https://demo.local/ecat#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+
+# 类目树
+:cat_running_shoes :subCategoryOf :cat_running_gear .
+:cat_trail_shoes   :subCategoryOf :cat_running_gear .
+:cat_running_gear  :subCategoryOf :cat_sports_outdoor .
+
+# 商品（sku5 故意没有品牌，供 OPTIONAL 演示）
+:sku1 a :SKU ; :name "闪电跑鞋" ; :price "499.00"^^xsd:decimal ;
+      :sales30d 120 ; :belongsToCategory :cat_running_shoes ; :madeBy :brand_stride .
+:sku2 a :SKU ; :name "清风跑鞋" ; :price "299.00"^^xsd:decimal ;
+      :sales30d 45 ; :belongsToCategory :cat_running_shoes ; :madeBy :brand_pace .
+:sku3 a :SKU ; :name "竞速碳板" ; :price "899.00"^^xsd:decimal ;
+      :sales30d 260 ; :belongsToCategory :cat_running_shoes ; :madeBy :brand_stride .
+:sku4 a :SKU ; :name "山野越野" ; :price "699.00"^^xsd:decimal ;
+      :sales30d 80 ; :belongsToCategory :cat_trail_shoes ; :madeBy :brand_pace .
+:sku5 a :SKU ; :name "白牌跑鞋" ; :price "199.00"^^xsd:decimal ;
+      :sales30d 30 ; :belongsToCategory :cat_running_shoes .
+
+:brand_stride :country "美国" .
+:brand_pace   :country "中国" .

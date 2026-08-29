@@ -1,0 +1,727 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+<https://demo.local/ecat/SKU/ID=1>
+        rdf:type  <https://demo.local/ecat/SKU> .
+
+<https://demo.local/ecat/SKU/ID=2>
+        rdf:type  <https://demo.local/ecat/SKU> .
+
+<https://demo.local/ecat/SKU/ID=3>
+        rdf:type  <https://demo.local/ecat/SKU> .
+
+<https://demo.local/ecat/SKU/ID=4>
+        rdf:type  <https://demo.local/ecat/SKU> .
+
+<https://demo.local/ecat/SKU/ID=5>
+        rdf:type  <https://demo.local/ecat/SKU> .
+
+<https://demo.local/ecat/SKU/ID=6>
+        rdf:type  <https://demo.local/ecat/SKU> .
+
+<https://demo.local/ecat/SKU/ID=7>
+        rdf:type  <https://demo.local/ecat/SKU> .
+
+<https://demo.local/ecat/SKU/ID=8>
+        rdf:type  <https://demo.local/ecat/SKU> .
+
+<https://demo.local/ecat/CERTIFICATION/ID=1>
+        <https://demo.local/ecat/CERTIFICATION#CERT_TYPE>  "质检报告" .
+
+<https://demo.local/ecat/CERTIFICATION/ID=2>
+        <https://demo.local/ecat/CERTIFICATION#CERT_TYPE>  "质检报告" .
+
+<https://demo.local/ecat/PRODUCT/ID=1>
+        <https://demo.local/ecat/PRODUCT#ref-BRAND_ID>  <https://demo.local/ecat/BRAND/ID=1> .
+
+<https://demo.local/ecat/PRODUCT/ID=3>
+        <https://demo.local/ecat/PRODUCT#ref-BRAND_ID>  <https://demo.local/ecat/BRAND/ID=1> .
+
+<https://demo.local/ecat/PRODUCT/ID=5>
+        <https://demo.local/ecat/PRODUCT#ref-BRAND_ID>  <https://demo.local/ecat/BRAND/ID=1> .
+
+<https://demo.local/ecat/PRODUCT/ID=7>
+        <https://demo.local/ecat/PRODUCT#ref-BRAND_ID>  <https://demo.local/ecat/BRAND/ID=1> .
+
+<https://demo.local/ecat/PRODUCT/ID=2>
+        <https://demo.local/ecat/PRODUCT#ref-BRAND_ID>  <https://demo.local/ecat/BRAND/ID=2> .
+
+<https://demo.local/ecat/PRODUCT/ID=4>
+        <https://demo.local/ecat/PRODUCT#ref-BRAND_ID>  <https://demo.local/ecat/BRAND/ID=2> .
+
+<https://demo.local/ecat/PRODUCT/ID=6>
+        <https://demo.local/ecat/PRODUCT#ref-BRAND_ID>  <https://demo.local/ecat/BRAND/ID=2> .
+
+<https://demo.local/ecat/PRODUCT/ID=8>
+        <https://demo.local/ecat/PRODUCT#ref-BRAND_ID>  <https://demo.local/ecat/BRAND/ID=2> .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=1>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#CAMPAIGN>  "618大促" .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=2>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#CAMPAIGN>  "618大促" .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=3>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#CAMPAIGN>  "618大促" .
+
+<https://demo.local/ecat/PRODUCT/ID=1>
+        <https://demo.local/ecat/PRODUCT#BRAND_ID>  1 .
+
+<https://demo.local/ecat/PRODUCT/ID=3>
+        <https://demo.local/ecat/PRODUCT#BRAND_ID>  1 .
+
+<https://demo.local/ecat/PRODUCT/ID=5>
+        <https://demo.local/ecat/PRODUCT#BRAND_ID>  1 .
+
+<https://demo.local/ecat/PRODUCT/ID=7>
+        <https://demo.local/ecat/PRODUCT#BRAND_ID>  1 .
+
+<https://demo.local/ecat/PRODUCT/ID=2>
+        <https://demo.local/ecat/PRODUCT#BRAND_ID>  2 .
+
+<https://demo.local/ecat/PRODUCT/ID=4>
+        <https://demo.local/ecat/PRODUCT#BRAND_ID>  2 .
+
+<https://demo.local/ecat/PRODUCT/ID=6>
+        <https://demo.local/ecat/PRODUCT#BRAND_ID>  2 .
+
+<https://demo.local/ecat/PRODUCT/ID=8>
+        <https://demo.local/ecat/PRODUCT#BRAND_ID>  2 .
+
+<https://demo.local/ecat/CERTIFICATION/ID=1>
+        rdf:type  <https://demo.local/ecat/CERTIFICATION> .
+
+<https://demo.local/ecat/CERTIFICATION/ID=2>
+        rdf:type  <https://demo.local/ecat/CERTIFICATION> .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#MIN_PRICE_30D>  459.00 .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#MIN_PRICE_30D>  279.00 .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#MIN_PRICE_30D>  379.00 .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#MIN_PRICE_30D>  439.00 .
+
+<https://demo.local/ecat/SKU/ID=5>
+        <https://demo.local/ecat/SKU#MIN_PRICE_30D>  349.00 .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#MIN_PRICE_30D>  319.00 .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#MIN_PRICE_30D>  249.00 .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#MIN_PRICE_30D>  189.00 .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#ID>  1 .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#ID>  2 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=1;CERT_ID=1>
+        <https://demo.local/ecat/SKU_CERTIFICATION#CERT_ID>  1 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=2;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#CERT_ID>  2 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=3;CERT_ID=1>
+        <https://demo.local/ecat/SKU_CERTIFICATION#CERT_ID>  1 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=4;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#CERT_ID>  2 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=8;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#CERT_ID>  2 .
+
+<https://demo.local/ecat/MERCHANT/ID=1>
+        <https://demo.local/ecat/MERCHANT#NAME>  "Alpha旗舰店" .
+
+<https://demo.local/ecat/MERCHANT/ID=2>
+        <https://demo.local/ecat/MERCHANT#NAME>  "Beta专营店" .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#PRODUCT_ID>  1 .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#PRODUCT_ID>  2 .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#PRODUCT_ID>  3 .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#PRODUCT_ID>  4 .
+
+<https://demo.local/ecat/SKU/ID=5>
+        <https://demo.local/ecat/SKU#PRODUCT_ID>  5 .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#PRODUCT_ID>  6 .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#PRODUCT_ID>  7 .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#PRODUCT_ID>  8 .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#MERCHANT_ID>  1 .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#MERCHANT_ID>  1 .
+
+<https://demo.local/ecat/SKU/ID=5>
+        <https://demo.local/ecat/SKU#MERCHANT_ID>  1 .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#MERCHANT_ID>  1 .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#MERCHANT_ID>  2 .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#MERCHANT_ID>  2 .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#MERCHANT_ID>  2 .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#MERCHANT_ID>  2 .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#ref-BRAND_ID>  <https://demo.local/ecat/BRAND/ID=1> .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#ref-BRAND_ID>  <https://demo.local/ecat/BRAND/ID=2> .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#CATEGORY_ID>  3 .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#CATEGORY_ID>  3 .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#CATEGORY_ID>  3 .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#CATEGORY_ID>  3 .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#CATEGORY_ID>  3 .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#CATEGORY_ID>  3 .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#CATEGORY_ID>  3 .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#MERCHANT_ID>  1 .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#MERCHANT_ID>  2 .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=1>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#ID>  1 .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=2>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#ID>  2 .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=3>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#ID>  3 .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#PRICE>  499.00 .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#PRICE>  299.00 .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#PRICE>  399.00 .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#PRICE>  469.00 .
+
+<https://demo.local/ecat/SKU/ID=5>
+        <https://demo.local/ecat/SKU#PRICE>  359.00 .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#PRICE>  329.00 .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#PRICE>  259.00 .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#PRICE>  199.00 .
+
+<https://demo.local/ecat/PRODUCT/ID=1>
+        <https://demo.local/ecat/PRODUCT#STATUS>  "ACTIVE" .
+
+<https://demo.local/ecat/PRODUCT/ID=2>
+        <https://demo.local/ecat/PRODUCT#STATUS>  "ACTIVE" .
+
+<https://demo.local/ecat/PRODUCT/ID=3>
+        <https://demo.local/ecat/PRODUCT#STATUS>  "ACTIVE" .
+
+<https://demo.local/ecat/PRODUCT/ID=4>
+        <https://demo.local/ecat/PRODUCT#STATUS>  "ACTIVE" .
+
+<https://demo.local/ecat/PRODUCT/ID=5>
+        <https://demo.local/ecat/PRODUCT#STATUS>  "ACTIVE" .
+
+<https://demo.local/ecat/PRODUCT/ID=6>
+        <https://demo.local/ecat/PRODUCT#STATUS>  "ACTIVE" .
+
+<https://demo.local/ecat/PRODUCT/ID=7>
+        <https://demo.local/ecat/PRODUCT#STATUS>  "ACTIVE" .
+
+<https://demo.local/ecat/PRODUCT/ID=8>
+        <https://demo.local/ecat/PRODUCT#STATUS>  "ACTIVE" .
+
+<https://demo.local/ecat/BRAND/ID=1>
+        <https://demo.local/ecat/BRAND#COUNTRY>  "美国" .
+
+<https://demo.local/ecat/BRAND/ID=2>
+        <https://demo.local/ecat/BRAND#COUNTRY>  "中国" .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1>
+        rdf:type  <https://demo.local/ecat/BRAND_AUTHORIZATION> .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2>
+        rdf:type  <https://demo.local/ecat/BRAND_AUTHORIZATION> .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#VALID_UNTIL>  "2027-06-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#VALID_UNTIL>  "2026-09-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/CERTIFICATION/ID=1>
+        <https://demo.local/ecat/CERTIFICATION#ID>  1 .
+
+<https://demo.local/ecat/CERTIFICATION/ID=2>
+        <https://demo.local/ecat/CERTIFICATION#ID>  2 .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#ref-MERCHANT_ID>  <https://demo.local/ecat/MERCHANT/ID=1> .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#ref-MERCHANT_ID>  <https://demo.local/ecat/MERCHANT/ID=2> .
+
+<https://demo.local/ecat/CERTIFICATION/ID=1>
+        <https://demo.local/ecat/CERTIFICATION#VALID_UNTIL>  "2027-03-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/CERTIFICATION/ID=2>
+        <https://demo.local/ecat/CERTIFICATION#VALID_UNTIL>  "2026-12-31"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=1>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#SKU_ID>  1 .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=2>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#SKU_ID>  4 .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=3>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#SKU_ID>  6 .
+
+<https://demo.local/ecat/BRAND/ID=1>
+        <https://demo.local/ecat/BRAND#NAME>  "StrideMax" .
+
+<https://demo.local/ecat/BRAND/ID=2>
+        <https://demo.local/ecat/BRAND#NAME>  "PaceFox" .
+
+<https://demo.local/ecat/BRAND/ID=1>
+        rdf:type  <https://demo.local/ecat/BRAND> .
+
+<https://demo.local/ecat/BRAND/ID=2>
+        rdf:type  <https://demo.local/ecat/BRAND> .
+
+<https://demo.local/ecat/CATEGORY/ID=2>
+        <https://demo.local/ecat/CATEGORY#ref-PARENT_ID>  <https://demo.local/ecat/CATEGORY/ID=1> .
+
+<https://demo.local/ecat/CATEGORY/ID=3>
+        <https://demo.local/ecat/CATEGORY#ref-PARENT_ID>  <https://demo.local/ecat/CATEGORY/ID=2> .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#SALES_30D>  120 .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#SALES_30D>  5 .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#SALES_30D>  80 .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#SALES_30D>  260 .
+
+<https://demo.local/ecat/SKU/ID=5>
+        <https://demo.local/ecat/SKU#SALES_30D>  45 .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#SALES_30D>  70 .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#SALES_30D>  60 .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#SALES_30D>  3 .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#ref-MERCHANT_ID>  <https://demo.local/ecat/MERCHANT/ID=1> .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#ref-MERCHANT_ID>  <https://demo.local/ecat/MERCHANT/ID=1> .
+
+<https://demo.local/ecat/SKU/ID=5>
+        <https://demo.local/ecat/SKU#ref-MERCHANT_ID>  <https://demo.local/ecat/MERCHANT/ID=1> .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#ref-MERCHANT_ID>  <https://demo.local/ecat/MERCHANT/ID=1> .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#ref-MERCHANT_ID>  <https://demo.local/ecat/MERCHANT/ID=2> .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#ref-MERCHANT_ID>  <https://demo.local/ecat/MERCHANT/ID=2> .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#ref-MERCHANT_ID>  <https://demo.local/ecat/MERCHANT/ID=2> .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#ref-MERCHANT_ID>  <https://demo.local/ecat/MERCHANT/ID=2> .
+
+<https://demo.local/ecat/CATEGORY/ID=1>
+        <https://demo.local/ecat/CATEGORY#ID>  1 .
+
+<https://demo.local/ecat/CATEGORY/ID=2>
+        <https://demo.local/ecat/CATEGORY#ID>  2 .
+
+<https://demo.local/ecat/CATEGORY/ID=3>
+        <https://demo.local/ecat/CATEGORY#ID>  3 .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=1>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#ref-SKU_ID>  <https://demo.local/ecat/SKU/ID=1> .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=2>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#ref-SKU_ID>  <https://demo.local/ecat/SKU/ID=4> .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=3>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#ref-SKU_ID>  <https://demo.local/ecat/SKU/ID=6> .
+
+<https://demo.local/ecat/MERCHANT/ID=1>
+        rdf:type  <https://demo.local/ecat/MERCHANT> .
+
+<https://demo.local/ecat/MERCHANT/ID=2>
+        rdf:type  <https://demo.local/ecat/MERCHANT> .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#ref-PRODUCT_ID>  <https://demo.local/ecat/PRODUCT/ID=1> .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#ref-PRODUCT_ID>  <https://demo.local/ecat/PRODUCT/ID=2> .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#ref-PRODUCT_ID>  <https://demo.local/ecat/PRODUCT/ID=3> .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#ref-PRODUCT_ID>  <https://demo.local/ecat/PRODUCT/ID=4> .
+
+<https://demo.local/ecat/SKU/ID=5>
+        <https://demo.local/ecat/SKU#ref-PRODUCT_ID>  <https://demo.local/ecat/PRODUCT/ID=5> .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#ref-PRODUCT_ID>  <https://demo.local/ecat/PRODUCT/ID=6> .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#ref-PRODUCT_ID>  <https://demo.local/ecat/PRODUCT/ID=7> .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#ref-PRODUCT_ID>  <https://demo.local/ecat/PRODUCT/ID=8> .
+
+<https://demo.local/ecat/PRODUCT/ID=1>
+        rdf:type  <https://demo.local/ecat/PRODUCT> .
+
+<https://demo.local/ecat/PRODUCT/ID=3>
+        rdf:type  <https://demo.local/ecat/PRODUCT> .
+
+<https://demo.local/ecat/PRODUCT/ID=5>
+        rdf:type  <https://demo.local/ecat/PRODUCT> .
+
+<https://demo.local/ecat/PRODUCT/ID=7>
+        rdf:type  <https://demo.local/ecat/PRODUCT> .
+
+<https://demo.local/ecat/PRODUCT/ID=2>
+        rdf:type  <https://demo.local/ecat/PRODUCT> .
+
+<https://demo.local/ecat/PRODUCT/ID=4>
+        rdf:type  <https://demo.local/ecat/PRODUCT> .
+
+<https://demo.local/ecat/PRODUCT/ID=6>
+        rdf:type  <https://demo.local/ecat/PRODUCT> .
+
+<https://demo.local/ecat/PRODUCT/ID=8>
+        rdf:type  <https://demo.local/ecat/PRODUCT> .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#INVENTORY_DAYS>  20 .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#INVENTORY_DAYS>  95 .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#INVENTORY_DAYS>  30 .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#INVENTORY_DAYS>  15 .
+
+<https://demo.local/ecat/SKU/ID=5>
+        <https://demo.local/ecat/SKU#INVENTORY_DAYS>  40 .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#INVENTORY_DAYS>  25 .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#INVENTORY_DAYS>  50 .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#INVENTORY_DAYS>  120 .
+
+<https://demo.local/ecat/PRODUCT/ID=1>
+        <https://demo.local/ecat/PRODUCT#NAME>  "闪电跑鞋SPU" .
+
+<https://demo.local/ecat/PRODUCT/ID=2>
+        <https://demo.local/ecat/PRODUCT#NAME>  "清风跑鞋SPU" .
+
+<https://demo.local/ecat/PRODUCT/ID=3>
+        <https://demo.local/ecat/PRODUCT#NAME>  "疾风跑鞋SPU" .
+
+<https://demo.local/ecat/PRODUCT/ID=4>
+        <https://demo.local/ecat/PRODUCT#NAME>  "幻影竞速SPU" .
+
+<https://demo.local/ecat/PRODUCT/ID=5>
+        <https://demo.local/ecat/PRODUCT#NAME>  "晨曦跑鞋SPU" .
+
+<https://demo.local/ecat/PRODUCT/ID=6>
+        <https://demo.local/ecat/PRODUCT#NAME>  "赤兔跑鞋SPU" .
+
+<https://demo.local/ecat/PRODUCT/ID=7>
+        <https://demo.local/ecat/PRODUCT#NAME>  "磐石跑鞋SPU" .
+
+<https://demo.local/ecat/PRODUCT/ID=8>
+        <https://demo.local/ecat/PRODUCT#NAME>  "孤影跑鞋SPU" .
+
+<https://demo.local/ecat/CATEGORY/ID=1>
+        <https://demo.local/ecat/CATEGORY#NAME>  "运动户外" .
+
+<https://demo.local/ecat/CATEGORY/ID=2>
+        <https://demo.local/ecat/CATEGORY#NAME>  "跑步装备" .
+
+<https://demo.local/ecat/CATEGORY/ID=3>
+        <https://demo.local/ecat/CATEGORY#NAME>  "跑步鞋" .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=1>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#BRAND_ID>  1 .
+
+<https://demo.local/ecat/BRAND_AUTHORIZATION/ID=2>
+        <https://demo.local/ecat/BRAND_AUTHORIZATION#BRAND_ID>  2 .
+
+<https://demo.local/ecat/CATEGORY/ID=2>
+        <https://demo.local/ecat/CATEGORY#PARENT_ID>  1 .
+
+<https://demo.local/ecat/CATEGORY/ID=3>
+        <https://demo.local/ecat/CATEGORY#PARENT_ID>  2 .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#ref-CATEGORY_ID>  <https://demo.local/ecat/CATEGORY/ID=3> .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#ref-CATEGORY_ID>  <https://demo.local/ecat/CATEGORY/ID=3> .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#ref-CATEGORY_ID>  <https://demo.local/ecat/CATEGORY/ID=3> .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#ref-CATEGORY_ID>  <https://demo.local/ecat/CATEGORY/ID=3> .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#ref-CATEGORY_ID>  <https://demo.local/ecat/CATEGORY/ID=3> .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#ref-CATEGORY_ID>  <https://demo.local/ecat/CATEGORY/ID=3> .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#ref-CATEGORY_ID>  <https://demo.local/ecat/CATEGORY/ID=3> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=1;CERT_ID=1>
+        rdf:type  <https://demo.local/ecat/SKU_CERTIFICATION> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=2;CERT_ID=2>
+        rdf:type  <https://demo.local/ecat/SKU_CERTIFICATION> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=3;CERT_ID=1>
+        rdf:type  <https://demo.local/ecat/SKU_CERTIFICATION> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=4;CERT_ID=2>
+        rdf:type  <https://demo.local/ecat/SKU_CERTIFICATION> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=8;CERT_ID=2>
+        rdf:type  <https://demo.local/ecat/SKU_CERTIFICATION> .
+
+<https://demo.local/ecat/CATEGORY/ID=1>
+        rdf:type  <https://demo.local/ecat/CATEGORY> .
+
+<https://demo.local/ecat/CATEGORY/ID=2>
+        rdf:type  <https://demo.local/ecat/CATEGORY> .
+
+<https://demo.local/ecat/CATEGORY/ID=3>
+        rdf:type  <https://demo.local/ecat/CATEGORY> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=1;CERT_ID=1>
+        <https://demo.local/ecat/SKU_CERTIFICATION#SKU_ID>  1 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=2;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#SKU_ID>  2 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=3;CERT_ID=1>
+        <https://demo.local/ecat/SKU_CERTIFICATION#SKU_ID>  3 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=4;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#SKU_ID>  4 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=8;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#SKU_ID>  8 .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=1>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#PROMO_PRICE>  449.00 .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=2>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#PROMO_PRICE>  449.00 .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=3>
+        <https://demo.local/ecat/PROMO_ENROLLMENT#PROMO_PRICE>  309.00 .
+
+<https://demo.local/ecat/MERCHANT/ID=1>
+        <https://demo.local/ecat/MERCHANT#ID>  1 .
+
+<https://demo.local/ecat/MERCHANT/ID=2>
+        <https://demo.local/ecat/MERCHANT#ID>  2 .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#LISTED_DATE>  "2026-05-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#LISTED_DATE>  "2025-11-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#LISTED_DATE>  "2026-06-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#LISTED_DATE>  "2026-08-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/SKU/ID=5>
+        <https://demo.local/ecat/SKU#LISTED_DATE>  "2026-07-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#LISTED_DATE>  "2026-04-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#LISTED_DATE>  "2026-03-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#LISTED_DATE>  "2025-09-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+
+<https://demo.local/ecat/BRAND/ID=1>
+        <https://demo.local/ecat/BRAND#ID>  1 .
+
+<https://demo.local/ecat/BRAND/ID=2>
+        <https://demo.local/ecat/BRAND#ID>  2 .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=1>
+        rdf:type  <https://demo.local/ecat/PROMO_ENROLLMENT> .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=2>
+        rdf:type  <https://demo.local/ecat/PROMO_ENROLLMENT> .
+
+<https://demo.local/ecat/PROMO_ENROLLMENT/ID=3>
+        rdf:type  <https://demo.local/ecat/PROMO_ENROLLMENT> .
+
+<https://demo.local/ecat/PRODUCT/ID=1>
+        <https://demo.local/ecat/PRODUCT#ID>  1 .
+
+<https://demo.local/ecat/PRODUCT/ID=3>
+        <https://demo.local/ecat/PRODUCT#ID>  3 .
+
+<https://demo.local/ecat/PRODUCT/ID=5>
+        <https://demo.local/ecat/PRODUCT#ID>  5 .
+
+<https://demo.local/ecat/PRODUCT/ID=7>
+        <https://demo.local/ecat/PRODUCT#ID>  7 .
+
+<https://demo.local/ecat/PRODUCT/ID=2>
+        <https://demo.local/ecat/PRODUCT#ID>  2 .
+
+<https://demo.local/ecat/PRODUCT/ID=4>
+        <https://demo.local/ecat/PRODUCT#ID>  4 .
+
+<https://demo.local/ecat/PRODUCT/ID=6>
+        <https://demo.local/ecat/PRODUCT#ID>  6 .
+
+<https://demo.local/ecat/PRODUCT/ID=8>
+        <https://demo.local/ecat/PRODUCT#ID>  8 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=1;CERT_ID=1>
+        <https://demo.local/ecat/SKU_CERTIFICATION#ref-CERT_ID>  <https://demo.local/ecat/CERTIFICATION/ID=1> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=2;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#ref-CERT_ID>  <https://demo.local/ecat/CERTIFICATION/ID=2> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=3;CERT_ID=1>
+        <https://demo.local/ecat/SKU_CERTIFICATION#ref-CERT_ID>  <https://demo.local/ecat/CERTIFICATION/ID=1> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=4;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#ref-CERT_ID>  <https://demo.local/ecat/CERTIFICATION/ID=2> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=8;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#ref-CERT_ID>  <https://demo.local/ecat/CERTIFICATION/ID=2> .
+
+<https://demo.local/ecat/SKU/ID=1>
+        <https://demo.local/ecat/SKU#ID>  1 .
+
+<https://demo.local/ecat/SKU/ID=2>
+        <https://demo.local/ecat/SKU#ID>  2 .
+
+<https://demo.local/ecat/SKU/ID=3>
+        <https://demo.local/ecat/SKU#ID>  3 .
+
+<https://demo.local/ecat/SKU/ID=4>
+        <https://demo.local/ecat/SKU#ID>  4 .
+
+<https://demo.local/ecat/SKU/ID=5>
+        <https://demo.local/ecat/SKU#ID>  5 .
+
+<https://demo.local/ecat/SKU/ID=6>
+        <https://demo.local/ecat/SKU#ID>  6 .
+
+<https://demo.local/ecat/SKU/ID=7>
+        <https://demo.local/ecat/SKU#ID>  7 .
+
+<https://demo.local/ecat/SKU/ID=8>
+        <https://demo.local/ecat/SKU#ID>  8 .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=1;CERT_ID=1>
+        <https://demo.local/ecat/SKU_CERTIFICATION#ref-SKU_ID>  <https://demo.local/ecat/SKU/ID=1> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=2;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#ref-SKU_ID>  <https://demo.local/ecat/SKU/ID=2> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=3;CERT_ID=1>
+        <https://demo.local/ecat/SKU_CERTIFICATION#ref-SKU_ID>  <https://demo.local/ecat/SKU/ID=3> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=4;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#ref-SKU_ID>  <https://demo.local/ecat/SKU/ID=4> .
+
+<https://demo.local/ecat/SKU_CERTIFICATION/SKU_ID=8;CERT_ID=2>
+        <https://demo.local/ecat/SKU_CERTIFICATION#ref-SKU_ID>  <https://demo.local/ecat/SKU/ID=8> .

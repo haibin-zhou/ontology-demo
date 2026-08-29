@@ -1,0 +1,7 @@
+{
+  "asOfDate": "2026-08-28",
+  "promo": { "minGmv30d": 20000, "minGrossMargin": 0.15 },
+  "slowMoving": { "inventoryDaysGt": 60, "gmv30dLt": 20000 },
+  "newProduct": { "listedWithinDays": 30, "minGmv30d": 50000 },
+  "authorization": { "expiringWithinDays": 30 }
+}

@@ -1,0 +1,6 @@
+{
+  "cq1_promo_eligible.rq": {"var": "sku", "values": ["sku1", "sku4"]},
+  "cq2_slow_moving.rq": {"var": "sku", "values": ["sku2", "sku8"]},
+  "cq4_expiring_authorization.rq": {"var": "auth", "values": ["auth_beta_pace"]},
+  "cq5_new_product_boost.rq": {"var": "sku", "values": ["sku4"]}
+}

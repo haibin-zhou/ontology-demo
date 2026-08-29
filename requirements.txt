@@ -1,0 +1,4 @@
+rdflib>=7.0
+owlrl>=7.0
+pyshacl>=0.30
+requests>=2.31
